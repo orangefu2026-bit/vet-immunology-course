@@ -146,7 +146,7 @@
     }
   ],
   "deploy": {
-    "portal": "",
-    "ch1": ""
+    "portal": "https://orangefu2026-bit.github.io/vet-immunology-course/",
+    "ch1": "https://orangefu2026-bit.github.io/vet-immunology-course/chapter01/"
   }
 }
