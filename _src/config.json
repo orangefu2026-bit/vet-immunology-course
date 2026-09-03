@@ -6,8 +6,9 @@
       "title": "抗原",
       "en": "Antigen",
       "subtitle": "免疫应答的“启动开关”",
-      "metaphor": "敌方武装力量 · 疫苗的核心有效成分",
-      "status": "live"
+      "bar": "第一章 抗原",
+      "status": "live",
+      "desc": "本章为你建立理解抗体、补体、疫苗与免疫预防的起点：先看清“敌军”——抗原的种类、特性与特异性。"
     },
     {
       "key": "chapter04",
@@ -15,26 +16,29 @@
       "title": "抗体生物学功能",
       "en": "Antibody",
       "subtitle": "精准制导导弹",
-      "metaphor": "",
-      "status": "upcoming"
+      "bar": "第四章 抗体生物学功能",
+      "status": "live",
+      "desc": "抗体是体液免疫的“精准制导导弹”：本章看懂它的结构—功能关系，以及中和、调理、激活补体等生物学功能。"
     },
     {
       "key": "chapter05",
       "no": "第五章",
       "title": "细胞因子",
       "en": "Cytokine",
-      "subtitle": "战斗信号",
-      "metaphor": "",
-      "status": "upcoming"
+      "subtitle": "免疫系统的“战斗信号”",
+      "bar": "第五章 细胞因子",
+      "status": "live",
+      "desc": "免疫细胞之间靠“信号”协同作战：本章认识细胞因子的分类、作用特点与网络调控。"
     },
     {
       "key": "chapter08",
       "no": "第八章",
       "title": "体液免疫应答效应",
       "en": "Humoral Immunity",
-      "subtitle": "特种作战部队的战果清算",
-      "metaphor": "",
-      "status": "upcoming"
+      "subtitle": "特种作战部队的战果与复盘",
+      "bar": "第八章 体液免疫应答效应",
+      "status": "live",
+      "desc": "B 细胞如何被激活、分化为浆细胞并产生抗体？本章串起体液免疫应答的启动—效应—记忆全流程。"
     },
     {
       "key": "chapter09",
@@ -42,8 +46,9 @@
       "title": "Ⅰ型超敏反应",
       "en": "Type Ⅰ Hypersensitivity",
       "subtitle": "友军误击与过度火力",
-      "metaphor": "",
-      "status": "upcoming"
+      "bar": "第九章 Ⅰ型超敏反应",
+      "status": "live",
+      "desc": "免疫保护过度会伤及自身：本章以 IgE—肥大细胞为主线，理解过敏反应的机制、防治与兽医临床意义。"
     },
     {
       "key": "chapter10",
@@ -51,8 +56,9 @@
       "title": "免疫学新型检测方法",
       "en": "Immunoassays",
       "subtitle": "战场敌情侦察与情报分析",
-      "metaphor": "",
-      "status": "upcoming"
+      "bar": "第十章 免疫学新型检测方法",
+      "status": "live",
+      "desc": "抗原—抗体特异性结合是天然探针：本章掌握 ELISA、胶体金、免疫层析等技术的原理与兽医应用。"
     },
     {
       "key": "chapter11",
@@ -60,8 +66,9 @@
       "title": "免疫预防",
       "en": "Immunoprophylaxis",
       "subtitle": "新兵军事演习与战前推演",
-      "metaphor": "",
-      "status": "upcoming"
+      "bar": "第十一章 免疫预防",
+      "status": "live",
+      "desc": "疫苗与免疫程序是动物疫病防控的核心武器：本章学习疫苗种类、免疫机理与科学免疫程序的制定。"
     },
     {
       "key": "chapter12",
@@ -69,11 +76,12 @@
       "title": "新型疫苗与设计",
       "en": "Next-gen Vaccines",
       "subtitle": "面向未来的“武器系统”",
-      "metaphor": "",
-      "status": "upcoming"
+      "bar": "第十二章 新型疫苗与设计",
+      "status": "live",
+      "desc": "从亚单位到核酸疫苗：本章展望新型疫苗的设计逻辑与产业前沿，回扣全书“抗原→免疫→防控”主线。"
     }
   ],
-  "ch1pages": [
+  "student_pages": [
     {
       "file": "index.html",
       "short": "首页",
@@ -86,23 +94,23 @@
     },
     {
       "file": "m1.html",
-      "short": "核心知识一 · 抗原的概念与特性",
-      "nav": "M1 概念与特性"
+      "short": "核心知识一",
+      "nav": "M1"
     },
     {
       "file": "m2.html",
-      "short": "核心知识二 · 表位与抗原特异性",
-      "nav": "M2 表位与特异性"
+      "short": "核心知识二",
+      "nav": "M2"
     },
     {
       "file": "m3.html",
-      "short": "核心知识三 · 微生物抗原",
-      "nav": "M3 微生物抗原"
+      "short": "核心知识三",
+      "nav": "M3"
     },
     {
       "file": "m4.html",
-      "short": "核心知识四 · 毒素与基因工程抗原",
-      "nav": "M4 毒素·工程抗原"
+      "short": "核心知识四",
+      "nav": "M4"
     },
     {
       "file": "case.html",
@@ -140,8 +148,27 @@
       "nav": "扫码学习"
     }
   ],
+  "teacher_pages": [
+    {
+      "file": "teacher.html",
+      "short": "教师文档 · 20分钟比赛设计",
+      "nav": "教师文档"
+    },
+    {
+      "file": "script.html",
+      "short": "20分钟逐字讲课稿",
+      "nav": "逐字稿"
+    }
+  ],
   "deploy": {
     "portal": "https://orangefu2026-bit.github.io/vet-immunology-course/",
-    "ch1": "https://orangefu2026-bit.github.io/vet-immunology-course/chapter01/"
+    "ch01": "https://orangefu2026-bit.github.io/vet-immunology-course/chapter01/",
+    "ch04": "https://orangefu2026-bit.github.io/vet-immunology-course/chapter04/",
+    "ch05": "https://orangefu2026-bit.github.io/vet-immunology-course/chapter05/",
+    "ch08": "https://orangefu2026-bit.github.io/vet-immunology-course/chapter08/",
+    "ch09": "https://orangefu2026-bit.github.io/vet-immunology-course/chapter09/",
+    "ch10": "https://orangefu2026-bit.github.io/vet-immunology-course/chapter10/",
+    "ch11": "https://orangefu2026-bit.github.io/vet-immunology-course/chapter11/",
+    "ch12": "https://orangefu2026-bit.github.io/vet-immunology-course/chapter12/"
   }
 }

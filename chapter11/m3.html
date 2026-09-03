@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第十一章 免疫预防 · 模块三：基因工程疫苗的研制</title>
+<meta name="description" content="基因缺失疫苗研制流程与ASFV研究示例；基因工程活载体疫苗研制流程与腺病毒载体新冠疫苗；活疫苗优缺点与“区分疫苗株/野毒株”难点突破">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-ch="chapter11" data-page="%%PAGE%%">
+<div class="topbar"><div class="wrap">
+  <div><span class="dot"></span><b>华南农业大学 · 兽医免疫学</b> 网络课程 · 第十一章 免疫预防</div>
+  <div class="tb-right"><a href="../index.html">返回课程门户</a></div>
+</div></div>
+<header class="site-head"><div class="wrap">
+  <p class="course-kicker">《兽医免疫学》 网络课程 · 第十一章</p>
+  <h1 class="site-title">免疫预防 <span class="en">Immunoprophylaxis</span> <em>—— 新兵军事演习与战前推演</em></h1>
+  <p class="site-sub">疫苗与免疫程序是动物疫病防控的核心武器：本章学习疫苗种类、免疫机理与科学免疫程序的制定。</p>
+</div></header>
+<nav class="ch-nav"><div class="wrap"><a href="index.html" class="">首页</a><a href="pre.html" class="">课前学习</a><a href="m1.html" class="">M1</a><a href="m2.html" class="">M2</a><a href="m3.html" class="active">M3</a><a href="m4.html" class="">M4</a><a href="case.html" class="">案例教学</a><a href="quiz.html" class="">课堂互动</a><a href="homework.html" class="">课后作业</a><a href="eval.html" class="">学习评价</a><a href="sip.html" class="">课程思政</a><a href="frontier.html" class="">学科前沿</a><a href="qrcode.html" class="">扫码学习</a></div></nav>
+<!-- meta: title=第十一章 免疫预防 · 模块三：基因工程疫苗的研制; desc=基因缺失疫苗研制流程与ASFV研究示例；基因工程活载体疫苗研制流程与腺病毒载体新冠疫苗；活疫苗优缺点与“区分疫苗株/野毒株”难点突破 -->
+<main class="wrap">
+<section class="page-hero">
+  <p class="kicker">Module 3 · 新型疫苗研制</p>
+  <h1>模块三：基因工程疫苗的研制</h1>
+  <p class="lead">活疫苗免疫效果好，却有两个“先天烦恼”：<b>分不清疫苗株与野毒株</b>、担心毒力恢复。基因工程给了我们“手术刀”——<b>基因缺失疫苗</b>删掉毒力基因，<b>基因工程活载体疫苗</b>把病毒改装成“快递车”。本模块是本章难点（难点突破见 3.4）。</p>
+  <div class="tags"><span class="chip b-k">新型疫苗</span><span class="chip b-w">本章难点</span><span class="chip b-v">含可视化</span></div>
+</section>
+
+<section class="sec">
+  <h2 class="sec-t"><span class="ico">🎯</span> 学习目标卡</h2>
+  <ul class="goal-box" data-goal="m3">
+    <li>能说出基因缺失疫苗的基本原理（去除毒力基因、保留免疫原性）并复述研制流程</li>
+    <li>能复述课件中 ASFV 基因缺失疫苗研究的主要思路与结果（安全减毒但保护效率有限）</li>
+    <li>能说出基因工程活载体疫苗“ΔA 载体 + 目的基因 B”的构建逻辑</li>
+    <li>能解释“疫苗株 vs 野毒株”鉴别难题，并知道基因缺失标记是一条解决途径</li>
+  </ul>
+</section>
+
+<section class="sec" id="genedel">
+  <h2 class="sec-t"><span class="ico">✂️</span> 3.1 基因缺失疫苗的研制原理</h2>
+  <p class="sec-sub">课件：明确病毒编码毒力基因 → 基因缺失去除毒力基因 → 获得基因缺失毒株。</p>
+  <div class="fig"><div class="fig-body" style="text-align:center">
+    <svg viewBox="0 0 720 170" width="100%" style="max-width:700px" role="img" aria-label="基因缺失疫苗示意图">
+      <style>.gl{font-size:13px;fill:#40565b}.gb{font-size:13.5px;font-weight:700;fill:#0f5f69}</style>
+      <rect x="30" y="40" width="150" height="95" rx="12" fill="#fdeceb" stroke="#b0564b" stroke-width="1.6"/>
+      <text x="105" y="70" text-anchor="middle" class="gb" fill="#9d3a2e">强毒株</text>
+      <text x="105" y="95" text-anchor="middle" class="gl">含毒力基因</text>
+      <text x="105" y="115" text-anchor="middle" class="gl">（如 CD2v、MGF）</text>
+      <text x="215" y="90" text-anchor="middle" class="gl">去除毒力基因</text>
+      <text x="215" y="112" text-anchor="middle" class="gl" style="font-size:20px">✂️</text>
+      <rect x="315" y="40" width="150" height="95" rx="12" fill="#e8f1ef" stroke="#0f5f69" stroke-width="1.6"/>
+      <text x="390" y="70" text-anchor="middle" class="gb">基因缺失毒株</text>
+      <text x="390" y="95" text-anchor="middle" class="gl">失去毒力</text>
+      <text x="390" y="115" text-anchor="middle" class="gl">保留免疫原性</text>
+      <text x="530" y="90" text-anchor="middle" style="font-size:24px;fill:#0f5f69;font-weight:700">→</text>
+      <rect x="565" y="40" width="130" height="95" rx="12" fill="#e9f4ee" stroke="#2d7a52" stroke-width="1.6"/>
+      <text x="630" y="70" text-anchor="middle" class="gb" style="fill:#2d7a52">疫苗</text>
+      <text x="630" y="95" text-anchor="middle" class="gl">减毒活疫苗</text>
+      <text x="630" y="115" text-anchor="middle" class="gl">候选株</text>
+    </svg>
+  </div>
+  <div class="fig-cap"><b>图 3-1</b> 基因缺失疫苗原理：把强毒株的毒力基因（如 CD2v、MGF）删除，得到“缺了獠牙”的减毒株作疫苗。</div></div>
+  <div class="flow">
+    <div class="f-step hl"><i class="f-i">① 研究</i><b>明确病毒编码毒力基因</b><span>先弄清“哪个基因让它致病”</span></div>
+    <div class="f-arr">→</div>
+    <div class="f-step"><i class="f-i">② 编辑</i><b>基因缺失去除毒力基因</b><span>用基因工程删除/敲除毒力相关基因</span></div>
+    <div class="f-arr">→</div>
+    <div class="f-step"><i class="f-i">③ 获取</i><b>获得基因缺失毒株</b><span>减毒且保留复制与免疫原性</span></div>
+    <div class="f-arr">→</div>
+    <div class="f-step"><i class="f-i">④ 生产</i><b>培养、扩增、纯化与检测 → 制备疫苗</b><span>同弱毒疫苗的规模化流程</span></div>
+  </div>
+  <div class="callout q"><div class="c-t">为什么“删除毒力基因”还能顺便解决“身份难题”？</div>
+  <p>因为缺失的基因成为疫苗株的<b>“身份标记”</b>：野毒株有该基因，疫苗株没有。用针对“缺失基因的产物”做检测——<b>抗体阳性 = 感染过野毒，抗体阴性 + 打疫苗 = 免疫成功</b>。这就是“标记疫苗 + 鉴别诊断”的思路（难点突破 3.4 再展开）。</p></div>
+</section>
+
+<section class="sec" id="asf">
+  <h2 class="sec-t"><span class="ico">🔬</span> 3.2 研究示例：非洲猪瘟基因缺失疫苗的探索（课件实验室成果）</h2>
+  <div class="callout key"><div class="c-t">课件实验室成果：ASFV 减毒活疫苗（基因缺失疫苗）免疫效果检测</div>
+  <p><b>疫苗制备思路</b>：通过<b>同源重组技术删除 ASFV 毒力相关基因（如 CD2v、MGF）</b>，获得基因缺失重组病毒，并在<b>原代巨噬细胞</b>中扩增，经 <b>PCR 和测序验证</b>后用于猪免疫与攻毒试验，评价其安全性和保护效果，筛选减毒活疫苗候选株。</p>
+  <p><b>结果</b>：双基因缺失毒株 <b>ASFV-HNΔCD2vΔMGF</b> 虽具有良好安全性和减毒特性，但免疫后<b>仅延迟发病</b>，未能有效抑制病毒复制、排毒及组织损伤，对同源和异源毒株攻毒均<b>未提供充分保护</b>，整体保护效率有限。</p></div>
+  <div class="callout think"><div class="c-t">这个“失败”结果教会我们什么？</div>
+  <p>① <b>安全 ≠ 有效</b>：减毒株安全了，却未必能诱导足够强的保护性免疫；② 非洲猪瘟病毒免疫逃逸与保护机制非常复杂，<b>单一缺失可能“剪过头”</b>，把激发保护的抗原也削弱了；③ 疫苗研发是“安全—有效—稳定”三者的反复平衡，评价要靠严谨的<b>攻毒保护试验</b>。这正是科研规范与诚实报告的思政落点。</p></div>
+</section>
+
+<section class="sec" id="vector">
+  <h2 class="sec-t"><span class="ico">🚚</span> 3.3 基因工程活载体疫苗的研制</h2>
+  <p class="sec-sub">课件逻辑：把“目的基因 B”装进“复制缺陷的病毒载体 ΔA”，让载体把基因送进细胞表达抗原。</p>
+  <div class="flow">
+    <div class="f-step hl"><i class="f-i">准备①</i><b>目的基因 B 制备</b><span>编码保护性抗原的基因</span></div>
+    <div class="f-arr">+</div>
+    <div class="f-step"><i class="f-i">准备②</i><b>病毒 A 复制基因敲除</b><span>得到复制缺陷载体 病毒ΔA</span></div>
+    <div class="f-arr">→</div>
+    <div class="f-step"><i class="f-i">重组</i><b>重组病毒（ΔA+B）获得</b><span>把 B 装入 ΔA 载体</span></div>
+    <div class="f-arr">→</div>
+    <div class="f-step"><i class="f-i">验证</i><b>重组病毒 B 基因表达检测</b><span>确认能正确表达目的抗原</span></div>
+    <div class="f-arr">→</div>
+    <div class="f-step"><i class="f-i">生产</i><b>制备疫苗</b><span>规模化培养、纯化、灌装、质控</span></div>
+  </div>
+  <div class="callout key"><div class="c-t">为什么载体要“复制缺陷”？</div>
+  <p>载体病毒自身复制基因被敲除（病毒 ΔA），所以它在体内<b>不能有效增殖致病</b>，只负责“送快递”——把外源抗原基因 B 送进宿主细胞，让细胞自己合成抗原蛋白，从而像“体内微工厂”一样同时激活体液与细胞免疫。</p></div>
+  <div class="callout sip"><div class="c-t">应用范例：重组新冠疫苗（5 型腺病毒载体）</div>
+  <p>课件：我国科研人员研发的重组新型冠状病毒疫苗（5 型腺病毒载体），<b>以人复制缺陷型 5 型腺病毒为载体，插入新冠病毒刺突蛋白（S 蛋白）基因</b>以诱导免疫应答，适用于预防新型冠状病毒感染引起的疾病，<b>单剂接种后 14 天可形成保护</b>。这正是“ΔA 载体 + 目的基因 B”策略在重大疫情中的一次成功落地。</p></div>
+</section>
+
+<section class="sec" id="break">
+  <h2 class="sec-t"><span class="ico">🧩</span> 3.4 难点突破：如何区分“疫苗株”和“野毒株”？</h2>
+  <p class="sec-sub">课件提问：弱毒疫苗无法区分疫苗株和自然感染野毒株，怎么办？如何区分疫苗和野毒株？</p>
+  <div class="callout warn"><div class="c-t">先理解问题有多严重</div>
+  <p>防疫部门要靠“血清学阳性率”判断猪群是否感染野毒。如果打的弱毒疫苗产生的抗体和野毒感染产生的抗体<b>“长得一模一样”</b>，那就分不清——<b>明明只是打了疫苗，却可能被当成野毒阳性场</b>，影响检疫、扑杀决策与净化认证。这就是活疫苗“免疫好却难收场”的根源。</p></div>
+  <div class="duo">
+    <div class="side a"><h4>方案 1：基因缺失标记疫苗</h4><ul>
+      <li>疫苗株特意<b>缺失某个野毒株都有的基因</b>（如 gE、CD2v）</li>
+      <li>检测“针对缺失基因的抗体”→ <b>阳性=感染过野毒</b>，阴性=只打过疫苗</li>
+      <li>一句话：给疫苗株“做个记号”，从而<b>能区分疫苗和野毒株</b></li></ul></div>
+    <div class="vs">+</div>
+    <div class="side b"><h4>方案 2：分子鉴别检测</h4><ul>
+      <li>用 <b>PCR / 测序</b>直接检测病原核酸中的标记基因</li>
+      <li>从临床样本（血液/组织）里查“有没有那个缺失片段”</li>
+      <li>与血清学（查抗体）互补，实现“双保险”</li></ul></div>
+  </div>
+  <div class="callout think"><div class="c-t">别忘了缺点的另一面（课件）</div>
+  <p>基因缺失疫苗病毒<b>可能会与野毒株重组或发生核酸修补</b>，使缺失基因恢复而重获毒性——因此基因缺失苗的“标记”并非一劳永逸，仍需配合<b>生物安全与分子监测</b>。理解这一点，你就读懂了课件反复追问“怎么办/如何区分”背后的防疫智慧。</p></div>
+</section>
+
+<section class="sec">
+  <h2 class="sec-t"><span class="ico">🧠</span> 3.5 小结与自检</h2>
+  <div class="callout key"><div class="c-t">本模块知识地图</div>
+  <p><b>基因缺失疫苗</b>：明确毒力基因 → 删除 → 减毒株 → 制备；兼具“减毒 + 可标记”。<b>基因工程活载体疫苗</b>：目的基因 B + 复制缺陷载体 ΔA → 重组病毒 → 表达检测 → 制备；让细胞“现产抗原”。两者都指向同一目标：<b>安全地把有效抗原交给免疫系统，并尽量“留下身份记号”</b>。</p></div>
+  <div class="quiz" data-quiz-score="m3q">
+    <div class="q" data-type="single" data-answer="A">
+      <div class="q-head"><span class="q-tag single">模块自测</span><span class="q-points">M3 · Q1</span></div>
+      <div class="q-stem">基因缺失疫苗研制流程的第一步是：</div>
+      <div class="q-opts">
+        <label><input type="radio" name="m3q1" value="A"><span>A．明确病毒编码的毒力基因，再通过基因缺失去除毒力基因获得缺失毒株</span></label>
+        <label><input type="radio" name="m3q1" value="B"><span>B．直接把病毒用甲醛灭活</span></label>
+        <label><input type="radio" name="m3q1" value="C"><span>C．将病毒在低温下反复传代</span></label>
+        <label><input type="radio" name="m3q1" value="D"><span>D．无需任何基因操作即可获得</span></label>
+      </div>
+      <div class="q-acts"><button type="button" class="btn primary q-check">提交</button></div>
+      <div class="q-feedback"><div class="vf"></div>
+        <div class="q-explain" style="display:none">选 A。核心是“先找到毒力基因，再删掉它”获得基因缺失毒株（课件）；甲醛灭活是灭活疫苗路线，低温传代是人工致弱路线。</div>
+        <div class="q-ref" style="display:none">复习 3.1 基因缺失疫苗</div>
+      </div>
+    </div>
+    <div class="q" data-type="single" data-answer="B">
+      <div class="q-head"><span class="q-tag single">模块自测</span><span class="q-points">M3 · Q2</span></div>
+      <div class="q-stem">关于课件中 ASFV 双基因缺失毒株 ASFV-HNΔCD2vΔMGF 的研究结果，正确的是：</div>
+      <div class="q-opts">
+        <label><input type="radio" name="m3q2" value="A"><span>A．具有良好的安全性并提供充分保护，可直接推广应用</span></label>
+        <label><input type="radio" name="m3q2" value="B"><span>B．具有良好安全性和减毒特性，但免疫后仅延迟发病，对同源和异源攻毒未提供充分保护</span></label>
+        <label><input type="radio" name="m3q2" value="C"><span>C．安全性差，攻毒后迅速死亡</span></label>
+        <label><input type="radio" name="m3q2" value="D"><span>D．未经 PCR 和测序验证</span></label>
+      </div>
+      <div class="q-acts"><button type="button" class="btn primary q-check">提交</button></div>
+      <div class="q-feedback"><div class="vf"></div>
+        <div class="q-explain" style="display:none">选 B（课件原文结果）。安全减毒 ≠ 充分保护：该候选株仅延迟发病，复制/排毒/组织损伤未被有效抑制，保护效率有限——这正是“安全与有效需平衡”的典型案例。</div>
+        <div class="q-ref" style="display:none">复习 3.2 ASFV 研究示例</div>
+      </div>
+    </div>
+    <div style="display:flex;gap:8px;margin-top:6px"><button type="button" class="btn q-check-all">全部交卷</button>
+    <button type="button" class="btn q-redo">重做</button></div>
+  </div>
+</section>
+
+<div class="callout think"><div class="c-t">启发性问题（带着它进入模块四）</div>
+<p>灭活苗安全、弱毒苗高效、基因工程苗能“留记号”——那到底该用哪种？兽医疫苗的“选择题”没有标准答案，只有<b>基于疫病特点与生产场景的权衡</b>。模块四用活疫苗优缺点总结 + 一个“一针防两病”的创新应用（JEV-PPV 二联疫苗）来收束本章。</p></div>
+</main>
+
+<div class="wrap" style="display:flex;gap:10px;margin-top:34px"><a class="btn" href="m2.html">← 核心知识二</a><a class="btn primary" style="margin-left:auto" href="m4.html">继续：核心知识四 →</a></div>
+<footer class="site-foot"><div class="wrap">
+  <div>
+    <h5>《兽医免疫学》网络课程</h5>
+    <p style="margin:0">章节资源以课堂教学 PPT 为依据重构，服务“课前—课中—课后—评价”一体化学习；每章栏目结构一致，学习内容按章独立设计。</p>
+  </div>
+  <div>
+    <h5>本章页面</h5>
+    <ul><li><a href="index.html">首页</a></li><li><a href="pre.html">课前学习</a></li><li><a href="m1.html">核心知识一</a></li><li><a href="m2.html">核心知识二</a></li><li><a href="m3.html">核心知识三</a></li><li><a href="m4.html">核心知识四</a></li><li><a href="case.html">案例教学</a></li><li><a href="quiz.html">课堂互动 · 在线自测</a></li><li><a href="homework.html">课后作业</a></li><li><a href="eval.html">学习评价</a></li><li><a href="sip.html">课程思政</a></li><li><a href="frontier.html">学科前沿</a></li><li><a href="qrcode.html">扫码学习</a></li></ul>
+  </div>
+  <div>
+    <h5>扫码与反馈</h5>
+    <ul>
+      <li><a href="qrcode.html">📱 扫码进入本章资源</a></li>
+      <li><a href="eval.html#feedback">📋 学习反馈问卷</a></li>
+      <li><a href="../index.html">🏠 课程门户</a></li>
+    </ul>
+  </div>
+</div>
+<div class="copy">© <span id="year">2026</span> 华南农业大学兽医学院 · 课程内容仅供教学使用，前沿信息注明来源，禁止用于商业用途</div></footer>
+<button id="back-top" class="btn primary" style="display:none;position:fixed;right:22px;bottom:22px;z-index:99">↑ 顶部</button>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

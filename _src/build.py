@@ -1,17 +1,21 @@
 # -*- coding: utf-8 -*-
-"""站点构建器：_src/pages/<chapter>/<page>.html 片段 + 壳模板 → vet-immuno-course/ 成品
+"""站点构建器 v2（多章）
+- _src/pages/<chapter>/<page>.html 片段 + 壳模板 → 站点根生成成品
+- 遍历 config.chapters 中 status=live 的章，页面清单=student_pages（13 项，学生栏目）
+- 教师源页（teacher_pages）不写入站点；由 _work/export_teacher.py 复用本模块渲染后输出到
+  仓库外 00_教师比赛材料/（如需：python _work/export_teacher.py）
 用法：python _src/build.py
-后续新增章节：在 _src/config.json 登记章节 + 建立 _src/pages/chapterXX/*.html 片段，重跑即可。
 """
 import io, json, os, re, sys
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 SITE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.dirname(os.path.abspath(__file__))
-OUT = SITE
 cfg = json.load(open(os.path.join(SRC, "config.json"), encoding="utf-8"))
-CH_PAGES = cfg["ch1pages"]
 CHAPTERS = cfg["chapters"]
+STUDENT_PAGES = cfg["student_pages"]
+TEACHER_PAGES = cfg["teacher_pages"]
+DEPLOY = {k: v for k, v in (cfg.get("deploy") or {}).items() if v}
 
 
 def render_template(name):
@@ -19,7 +23,6 @@ def render_template(name):
 
 
 def meta_of(frag):
-    """页面片段首行支持 <!-- meta: title=..; desc=.. -->"""
     title, desc = "", ""
     for line in frag.splitlines()[:6]:
         m = re.search(r"<!--\s*meta:\s*(.*?)-->", line)
@@ -34,103 +37,103 @@ def meta_of(frag):
     return title, desc
 
 
-DEPLOY = {k: v for k, v in (cfg.get("deploy") or {}).items() if v}
-
-
 def apply_deploy(text):
-    """把片段中的 @@CH1_URL@@ / @@PORTAL_URL@@ 替换为已配置的公网地址（未配置则给出提示文案）"""
-    placeholders = {
-        "@@CH1_URL@@": ("ch1", "本章公网地址"),
-        "@@PORTAL_URL@@": ("portal", "课程门户公网地址"),
-    }
-    for tok, (key, label) in placeholders.items():
-        if tok in text:
-            val = DEPLOY.get(key, "")
-            text = text.replace(
-                tok,
-                val if val else f"（{label}将在网站部署并写入 _src/config.json 后自动显示）",
-            )
+    """把 @@CH1_URL@@ / @@PORTAL_URL@@ 替换为已配置公网地址；并在任意章节页把
+    @@CHX_URL@@(key) 形式令牌替换（兼容旧模板）。"""
+    if "@@CH1_URL@@" in text:
+        text = text.replace("@@CH1_URL@@", DEPLOY.get("ch1", ""))
+    if "@@PORTAL_URL@@" in text:
+        text = text.replace("@@PORTAL_URL@@", DEPLOY.get("portal", ""))
+    for tok in re.findall(r"@@(CH\d+_URL|PORTAL_URL)@@", text):
+        pass  # 保守：未知令牌保留原文由调用方处理
     return text
 
 
-def build_chapter(ch_key, pages, nav_home="../index.html"):
+def shell_tokens(ch):
+    return {
+        "%%CHAPTER%%": ch["key"],
+        "%%CH_NO%%": ch.get("no", ""),
+        "%%CH_TITLE%%": ch.get("title", ""),
+        "%%CH_EN%%": ch.get("en", ""),
+        "%%CH_SUB%%": ch.get("subtitle", ""),
+        "%%CH_DESC%%": ch.get("desc", ""),
+        "%%CH_BAR%%": ch.get("bar", ch.get("no", "")),
+    }
+
+
+def apply_shell(page, ch, extra=None):
+    for k, v in shell_tokens(ch).items():
+        page = page.replace(k, v)
+    if extra:
+        for k, v in extra.items():
+            page = page.replace(k, v)
+    return page
+
+
+def render_page(ch, frag, page_file, nav_pages, out_html=True):
+    """渲染单页完整 HTML（供站点输出与教师包导出共用）"""
     sh = render_template("ch_shell.html")
-    frag_dir = os.path.join(SRC, "pages", ch_key)
-    out_dir = os.path.join(OUT, ch_key)
+    title, desc = meta_of(frag)
+    nav_items = []
+    for pp in nav_pages:
+        cls = "active" if pp["file"] == page_file else ""
+        nav_items.append(f'<a href="{pp["file"]}" class="{cls}">{pp["nav"]}</a>')
+    foot_nav = "".join(
+        f'<li><a href="{pp["file"]}">{pp["short"]}</a></li>' for pp in nav_pages
+    )
+    files = [pp["file"] for pp in nav_pages]
+    idx = files.index(page_file) if page_file in files else -1
+    pager_bits = []
+    if idx > 0:
+        pager_bits.append(f'<a class="btn" href="{nav_pages[idx-1]["file"]}">← {nav_pages[idx-1]["short"]}</a>')
+    if 0 <= idx < len(nav_pages) - 1:
+        pager_bits.append(
+            f'<a class="btn primary" style="margin-left:auto" href="{nav_pages[idx+1]["file"]}">继续：{nav_pages[idx+1]["short"]} →</a>')
+    pager = ('<div class="wrap" style="display:flex;gap:10px;margin-top:34px">'
+             + "".join(pager_bits) + "</div>") if pager_bits else ""
+    page = (
+        sh.replace("%%TITLE%%", title)
+        .replace("%%DESC%%", desc)
+        .replace("%%NAV%%", nav_items and "".join(nav_items) or "")
+        .replace("%%FOOTNAV%%", foot_nav)
+        .replace("%%PAGER%%", pager)
+        .replace("%%CONTENT%%", apply_deploy(frag))
+    )
+    page = apply_shell(page, ch)
+    # 当前章公网地址注入（qrcode 页备用网址等）
+    this_url = DEPLOY.get("ch" + ch["key"].replace("chapter", ""), "") or DEPLOY.get(ch["key"], "")
+    if "@@THIS_URL@@" in page:
+        page = page.replace("@@THIS_URL@@", this_url or "（该章公网地址将在部署后自动显示）")
+    return page
+
+
+def build_chapter(ch, pages, out_dir):
+    frag_dir = os.path.join(SRC, "pages", ch["key"])
     os.makedirs(out_dir, exist_ok=True)
-    built = []
-    for i, p in enumerate(pages):
+    for p in pages:
         frag_path = os.path.join(frag_dir, p["file"])
         if not os.path.exists(frag_path):
-            print("  ! 缺少片段:", frag_path)
+            print(f"  ! 缺片段: {ch['key']}/{p['file']}（跳过）")
             continue
         frag = open(frag_path, encoding="utf-8").read()
-        title, desc = meta_of(frag)
-        # 导航
-        nav_items = []
-        for pp in pages:
-            cls = "active" if pp["file"] == p["file"] else ""
-            nav_items.append(f'<a href="{pp["file"]}" class="{cls}">{pp["nav"]}</a>')
-        nav = "".join(nav_items)
-        foot_nav = "".join(
-            f'<li><a href="{pp["file"]}">{pp["short"]}</a></li>' for pp in pages
-        )
-        # 上一页 / 下一页
-        idx = pages.index(p)
-        prev, nxt = None, None
-        if idx > 0:
-            prev = pages[idx - 1]
-        if idx < len(pages) - 1:
-            nxt = pages[idx + 1]
-        pager_bits = []
-        if prev:
-            pager_bits.append(
-                f'<a class="btn" href="{prev["file"]}">← {prev["short"]}</a>'
-            )
-        if nxt:
-            pager_bits.append(
-                f'<a class="btn primary" style="margin-left:auto" href="{nxt["file"]}">继续：{nxt["short"]} →</a>'
-            )
-        pager = (
-            '<div class="wrap" style="display:flex;gap:10px;margin-top:34px">'
-            + "".join(pager_bits)
-            + "</div>"
-            if pager_bits
-            else ""
-        )
-        page = (
-            sh.replace("%%CHAPTER%%", ch_key)
-            .replace("%%PAGE%%", p["file"])
-            .replace("%%TITLE%%", title)
-            .replace("%%DESC%%", desc)
-            .replace("%%NAV%%", nav)
-            .replace("%%FOOTNAV%%", foot_nav)
-            .replace("%%PAGER%%", pager)
-            .replace("%%CONTENT%%", apply_deploy(frag))
-        )
+        page = render_page(ch, frag, p["file"], pages)
         outp = os.path.join(out_dir, p["file"])
-        with open(outp, "w", encoding="utf-8") as f:
+        with io.open(outp, "w", encoding="utf-8") as f:
             f.write(page)
-        built.append(outp)
-        print(f"  ✓ {outp}")
-    return built
+        print(f"  ✓ {os.path.relpath(outp, SITE)}")
 
 
 def chapter_card(ch):
     if ch["status"] == "live":
-        icon = "✓"
         href = f'{ch["key"]}/index.html'
-        st = "已上线 · 可扫码学习"
-        cls = "live"
+        st, cls = "已上线 · 可扫码学习", "live"
     else:
-        icon = "…"
-        href = "#upcoming"
-        st = "按同一模板建设中"
-        cls = "soon"
+        href, st, cls = "#upcoming", "建设中", "soon"
+    no = ch.get("no", "").replace("第", "").replace("章", "")
     return f"""<a class="nav-card {cls}" href="{href}">
-  <span class="nc-idx">{ch["no"].replace("第", "").replace("章", "")}</span>
+  <span class="nc-idx">{no}</span>
   <div style="display:flex;align-items:baseline;gap:8px;flex-wrap:wrap">
-    <span class="chip b-k">{ch["no"]}</span>
+    <span class="chip b-k">{ch.get("no","")}</span>
     <span class="chip {'b-ok' if ch['status']=='live' else 'b-mute'}">{st}</span>
   </div>
   <div class="nc-title">{ch["title"]} <span class="en" style="color:var(--c-main2);font-weight:600;font-size:13px">{ch["en"]}</span></div>
@@ -140,29 +143,24 @@ def chapter_card(ch):
 
 
 def main():
-    # 1) 章节页面
-    ch = "chapter01"
-    print("构建章节:", ch)
-    build_chapter(ch, CH_PAGES)
-
-    # 2) 门户
-    print("构建门户 …")
-    shell = render_template("portal_shell.html")
-    frag_path = os.path.join(SRC, "pages", "_portal", "index.html")
-    frag = open(frag_path, encoding="utf-8").read()
+    portal_shell = render_template("portal_shell.html")
+    frag = open(os.path.join(SRC, "pages", "_portal", "index.html"), encoding="utf-8").read()
     title, desc = meta_of(frag)
     cards = "\n".join(chapter_card(c) for c in CHAPTERS)
-    frag = frag.replace("%%CHAPTERS%%", cards)
-    portal = (
-        shell.replace("%%TITLE%%", title)
-        .replace("%%DESC%%", desc)
-        .replace("%%CONTENT%%", apply_deploy(frag))
-    )
-    outp = os.path.join(OUT, "index.html")
-    with open(outp, "w", encoding="utf-8") as f:
+    frag = apply_deploy(frag).replace("%%CHAPTERS%%", cards)
+    portal = (portal_shell.replace("%%TITLE%%", title)
+              .replace("%%DESC%%", desc)
+              .replace("%%CONTENT%%", frag))
+    with io.open(os.path.join(SITE, "index.html"), "w", encoding="utf-8") as f:
         f.write(portal)
-    print("  ✓", outp)
-    print("完成。共生成文件：", len(os.listdir(os.path.join(OUT, "chapter01"))) + 1, "（另含 assets 静态资源）")
+    print("✓ 门户 index.html")
+
+    for ch in CHAPTERS:
+        if ch["status"] != "live":
+            continue
+        print(f"构建章节: {ch['key']}")
+        build_chapter(ch, STUDENT_PAGES, os.path.join(SITE, ch["key"]))
+    print("完成。")
 
 
 if __name__ == "__main__":

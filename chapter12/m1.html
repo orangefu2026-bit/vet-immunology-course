@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第十二章 新型疫苗与设计 · 模块一：概念与总体设计逻辑</title>
+<meta name="description" content="疫苗“换代”的意义、新型疫苗概念与种类、五环设计主链（选抗原→保表位/构象→佐剂/递送→安全与效力评价）——含图示与启发性问题">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-ch="chapter12" data-page="%%PAGE%%">
+<div class="topbar"><div class="wrap">
+  <div><span class="dot"></span><b>华南农业大学 · 兽医免疫学</b> 网络课程 · 第十二章 新型疫苗与设计</div>
+  <div class="tb-right"><a href="../index.html">返回课程门户</a></div>
+</div></div>
+<header class="site-head"><div class="wrap">
+  <p class="course-kicker">《兽医免疫学》 网络课程 · 第十二章</p>
+  <h1 class="site-title">新型疫苗与设计 <span class="en">Next-gen Vaccines</span> <em>—— 面向未来的“武器系统”</em></h1>
+  <p class="site-sub">从亚单位到核酸疫苗：本章展望新型疫苗的设计逻辑与产业前沿，回扣全书“抗原→免疫→防控”主线。</p>
+</div></header>
+<nav class="ch-nav"><div class="wrap"><a href="index.html" class="">首页</a><a href="pre.html" class="">课前学习</a><a href="m1.html" class="active">M1</a><a href="m2.html" class="">M2</a><a href="m3.html" class="">M3</a><a href="m4.html" class="">M4</a><a href="case.html" class="">案例教学</a><a href="quiz.html" class="">课堂互动</a><a href="homework.html" class="">课后作业</a><a href="eval.html" class="">学习评价</a><a href="sip.html" class="">课程思政</a><a href="frontier.html" class="">学科前沿</a><a href="qrcode.html" class="">扫码学习</a></div></nav>
+<!-- meta: title=第十二章 新型疫苗与设计 · 模块一：概念与总体设计逻辑; desc=疫苗“换代”的意义、新型疫苗概念与种类、五环设计主链（选抗原→保表位/构象→佐剂/递送→安全与效力评价）——含图示与启发性问题 -->
+<main class="wrap">
+<section class="page-hero">
+  <p class="kicker">Module 1 · 总体设计</p>
+  <h1>模块一：新型疫苗的概念与总体设计逻辑</h1>
+  <p class="lead">本模块回答三个问题：<b>为什么疫苗要“换代”？</b><b>什么是新型疫苗？</b>以及贯穿全章的<b>“五环设计主链”</b>——抓住这条链，后面四大平台都是它的“填空题”。</p>
+  <div class="tags"><span class="chip b-k">学习目标</span><span class="chip b-w">主线问题</span><span class="chip b-g">思考题（来自课件）</span></div>
+</section>
+
+<section class="sec">
+  <h2 class="sec-t"><span class="ico">🎯</span> 学习目标卡</h2>
+  <ul class="goal-box" data-goal="m1">
+    <li>能说出疫苗防控的意义，并用一句话概括“为什么需要新型疫苗”</li>
+    <li>能背诵新型疫苗的定义，并列举其主要包括的类型</li>
+    <li>能默写并解释“选抗原→保表位/构象→佐剂/递送→安全与效力评价”五环主链</li>
+    <li>能把四大平台“放进”设计主链，指出每环的典型问题</li>
+  </ul>
+</section>
+
+<section class="sec">
+  <h2 class="sec-t"><span class="ico">🛡️</span> 1.1 疫苗防控的意义：为什么要“换代”</h2>
+  <p class="sec-sub">课件从“意义”讲起，再点出“新型”二字的分量。</p>
+  <p>病原微生物引起的传染病危害严重，<b>免疫预防在传染病控制中具有重要意义</b>。课件用一句话给疫苗定位：<b>疫苗接种是免疫预防的重要手段，是守护健康的第一道防线。</b></p>
+  <div class="callout key"><div class="c-t">课件引文（总书记关于生物安全建设重要讲话，2021）</div>
+  <p>“坚持<b>人病兽防、关口前移</b>，从源头前端阻断人兽共患病的传播路径。”</p>
+  <p style="font-size:13.5px;color:var(--c-mute)">——这句话正是本章的价值底色：疫苗不只在“治已病”，更在“防未病”、在源头断传播。</p></div>
+  <p>那为什么还要“新型”疫苗？从上一章我们知道，传统疫苗（死疫苗、弱毒疫苗）是直接“拿全病原做文章”，效果可靠但有几道坎：</p>
+  <div class="grid grid-2">
+    <div class="card"><h3>传统疫苗的“老难题”</h3>
+      <ul style="font-size:14.5px">
+        <li><b>新发疫病</b>：病原刚出现时，来不及分离、培养、灭活/致弱；</li>
+        <li><b>安全与效力难两全</b>：灭活不完全或弱毒毒力返强存在风险；</li>
+        <li><b>变异应对慢</b>：毒株一变，传统路线要“重走一遍全流程”；</li>
+        <li><b>产能与成本</b>：需要大量培养病原，应急扩产受限于生物安全等级。</li>
+      </ul>
+    </div>
+    <div class="card"><h3>“新型疫苗”的新思路</h3>
+      <ul style="font-size:14.5px">
+        <li>不再依赖完整病原，而是<b>“要什么造什么”</b>：只拿保护性抗原/基因；</li>
+        <li>用<b>基因工程、分子微生物学</b>技术“设计”抗原形态与递送方式；</li>
+        <li>换一个表位序列/一个基因即可<b>快速应对变异</b>；</li>
+        <li>多平台并行，为不同场景（应急、净化、口服群体免疫）提供选项。</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout q"><div class="c-t">课件思考（课堂互动）</div>
+  <p>“疫苗在传染病防控中发挥重要作用”——请结合你学过的病例或新闻，举出一个“靠疫苗把一种烈性病摁住”的例子，并说说它属于传统还是新型疫苗。<br>
+  <details class="acc" style="margin-top:8px"><summary>参考思路（先自己答再看）</summary><div class="acc-b"><p style="font-size:14.5px">例如：口蹄疫/猪瘟等靠弱毒灭活疫苗长期控制（传统）；狂犬病靠犬只免疫实现人病兽防（传统为主）；而新冠期间腺病毒载体疫苗、mRNA 疫苗以“应急响应速度”登场（新型）。可自由作答，关键是区分“全病原形态”与“设计产物”。</p></div></details></p></div>
+</section>
+
+<section class="sec">
+  <h2 class="sec-t"><span class="ico">🗃️</span> 1.2 从“传统”到“新型”：常见疫苗的种类总览</h2>
+  <p class="sec-sub">先把“家底”摊开，再逐类深入。</p>
+  <p>课件在总结时给出目前常见疫苗的清单：<b>死疫苗、弱毒疫苗、亚单位疫苗、核酸疫苗、合成肽疫苗</b>。加上课件定义中提到的载体疫苗，按“制造思路”可分成两大类：</p>
+  <div class="table-wrap"><table class="tbl comp">
+    <thead><tr><th style="width:130px">比较项</th><th>传统疫苗（全病原路线）</th><th>新型疫苗（设计路线）</th></tr></thead>
+    <tbody>
+      <tr><td>有效成分形态</td><td>完整的灭活病原 / 致弱的活病原</td><td>纯化抗原蛋白、VLP、表位肽、改造的载体、核酸</td></tr>
+      <tr><td>制造技术</td><td>培养病原 + 灭活/致弱</td><td>基因工程、分子微生物学等现代生物技术</td></tr>
+      <tr><td>主要类型</td><td>死疫苗、弱毒疫苗</td><td>亚单位疫苗、多肽（合成肽）疫苗、载体疫苗、核酸疫苗（DNA/mRNA）等</td></tr>
+      <tr><td>免疫原性来源</td><td>整个病原的“天然全套”</td><td>精心挑选/表达/递送的保护性抗原或表位</td></tr>
+      <tr><td>对未知病原的响应</td><td>慢（需培养驯化）</td><td>相对快（改序列即可重新“出图”）</td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout think"><div class="c-t">一个容易踩的误区</div>
+  <p>“新型疫苗”不是“效果好、传统疫苗就差”。上一章说过，<b>疫苗需具备抗原的免疫原性，接种后可刺激机体产生抗体</b>——这条铁律对两类疫苗都成立。新型与否，比的是<b>制造与设计的思路</b>，不是效力高低的标签。</p></div>
+</section>
+
+<section class="sec" id="types">
+  <h2 class="sec-t"><span class="ico">📖</span> 1.3 新型疫苗的概念（课件定义逐词拆解）</h2>
+  <div class="callout key"><div class="c-t">新型疫苗的定义</div>
+  <p><b>新型疫苗是采用基因工程、分子微生物学等现代生物技术制造的疫苗，主要包括亚单位疫苗、多肽疫苗、载体疫苗、核酸疫苗等。</b></p></div>
+  <p>拆成三个关键词理解：</p>
+  <ul style="font-size:15px">
+    <li><b>“现代生物技术”</b>：指基因工程、分子微生物学等——可以<b>定向改造</b>抗原基因、重组表达、人工合成，而不是“抓来病原灭活”;</li>
+    <li><b>“制造”</b>：强调它是“造”出来的产物，抗原的形态（颗粒/肽/载体递送/核酸）是设计出来的；</li>
+    <li><b>“主要包括……”</b>：亚单位、多肽、载体、核酸四类是骨架（课件原文列举），模块二～四逐一展开。</li>
+  </ul>
+</section>
+
+<section class="sec" id="design">
+  <h2 class="sec-t"><span class="ico">🧭</span> 1.4 总体设计逻辑：“五环主链”（本章主线）</h2>
+  <p class="sec-sub">无论平台怎么换，疫苗设计都绕不开这条链。把它想象成造武器的流程：先搞清“打哪个靶”，再决定“用什么弹、怎么送、怎么验收”。</p>
+  <div class="flow">
+    <div class="f-step hl"><i class="f-i">① 选抗原</i><b>锁定保护性靶标</b><span>明确哪个成分/表位能诱导保护（IgG/中和/细胞免疫）</span></div>
+    <div class="f-arr">→</div>
+    <div class="f-step"><i class="f-i">② 保表位/构象</i><b>让免疫系统“认得对”</b><span>选择呈现平台，保留构象表位、正确递呈</span></div>
+    <div class="f-arr">→</div>
+    <div class="f-step"><i class="f-i">③ 佐剂/递送</i><b>把应答“顶上去”</b><span>佐剂增强应答；载体/核酸解决“怎么送、送多强”</span></div>
+    <div class="f-arr">→</div>
+    <div class="f-step"><i class="f-i">④ 安全评价</i><b>先确保“不出事”</b><span>载体是否复制、有无残余毒力、不良反应、生物安全</span></div>
+    <div class="f-arr">→</div>
+    <div class="f-step"><i class="f-i">⑤ 效力评价</i><b>拿指标验收</b><span>特异性 IgG、中和抗体、IFN-γ、CTL 活性等</span></div>
+  </div>
+  <p style="margin-top:.8em">注意：这不是一条“走完就完”的直线——<b>⑤ 的读数会回头修正 ①～③</b>（如中和抗体不够，可能要换平台/换表位/加强佐剂），设计本质是“评价驱动、迭代优化”。</p>
+  <div class="table-wrap"><table class="tbl">
+    <caption>五环主链 ↔ 本章四大平台（先给地图，后学细节）</caption>
+    <thead><tr><th style="width:150px">平台 / 环节</th><th>典型“设计题”</th><th>在哪个模块展开</th></tr></thead>
+    <tbody>
+      <tr><td>亚单位疫苗</td><td>“有效抗原表达出来 + 佐剂”就够了吗？构象要不要保？</td><td><a href="m2.html">模块二</a></td></tr>
+      <tr><td>VLP（病毒样颗粒）</td><td>怎么把单体蛋白“搭成颗粒”，增强免疫原性？</td><td><a href="m2.html">模块二</a></td></tr>
+      <tr><td>合成肽疫苗</td><td>“选哪一段表位肽”“肽要不要偶联载体/加佐剂”？</td><td><a href="m3.html">模块三</a></td></tr>
+      <tr><td>载体活疫苗</td><td>把保护性基因“装进”改造的载体，怎么保证安全？</td><td><a href="m3.html">模块三</a></td></tr>
+      <tr><td>核酸疫苗（DNA/mRNA）</td><td>把“图纸”直接打进去，体内表达——怎么递送与评价？</td><td><a href="m4.html">模块四</a></td></tr>
+      <tr><td>AI / 智能设计</td><td>谁来预测表位、辅助选抗原？工具与实验如何分工？</td><td><a href="m4.html">模块四</a></td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout q"><div class="c-t">推理题（先想后看）</div>
+  <p>为什么把“① 选抗原”放在第一步，而不是“先造一个疫苗试试看”？<br>
+  <details class="acc" style="margin-top:8px"><summary>参考思路</summary><div class="acc-b"><p style="font-size:14.5px">疫苗的本质是“用对的特异性换保护”。如果保护性抗原/表位没选对——比如选了一个不诱导中和抗体的蛋白——后面佐剂再好、平台再先进也“白搭”。第一章告诉我们：特异性写在表位上；所以设计的第一决策永远是“打哪个靶”。</p></div></details></p></div>
+</section>
+
+<section class="sec">
+  <h2 class="sec-t"><span class="ico">🧠</span> 1.5 小结与自检</h2>
+  <div class="callout key"><div class="c-t">本模块知识地图</div>
+  <p><b>疫苗意义</b>（免疫预防是第一道防线，人病兽防）→ <b>为什么换代</b>（新发/变异/安全/产能）→ <b>新型疫苗定义</b>（现代生物技术制造，含亚单位/多肽/载体/核酸）→ <b>五环主链</b>（选抗原→保表位构象→佐剂递送→安全评价→效力评价→迭代）。下一模块开始给主链“填空”：先看第一格——亚单位疫苗怎么“把抗原挑出来并搭好架子”。</p></div>
+  <div class="quiz" data-quiz-score="m1q">
+    <div class="q" data-type="single" data-answer="B">
+      <div class="q-head"><span class="q-tag single">模块自测</span><span class="q-points">M1 · Q1</span></div>
+      <div class="q-stem">关于新型疫苗，下列说法正确的是：</div>
+      <div class="q-opts">
+        <label><input type="radio" name="m1q1" value="A"><span>A．新型疫苗就是用完整灭活病原制成的疫苗</span></label>
+        <label><input type="radio" name="m1q1" value="B"><span>B．新型疫苗是采用基因工程、分子微生物学等现代生物技术制造的疫苗</span></label>
+        <label><input type="radio" name="m1q1" value="C"><span>C．新型疫苗不再需要具备免疫原性</span></label>
+        <label><input type="radio" name="m1q1" value="D"><span>D．弱毒疫苗属于新型疫苗的典型代表</span></label>
+      </div>
+      <div class="q-acts"><button type="button" class="btn primary q-check">提交</button></div>
+      <div class="q-feedback"><div class="vf"></div>
+        <div class="q-explain" style="display:none">选 B（课件定义原文）。新型与否取决于“制造与设计思路”；任何疫苗的有效成分都必须具备抗原的免疫原性；弱毒疫苗属传统路线。</div>
+        <div class="q-ref" style="display:none">复习 1.3 概念</div>
+      </div>
+    </div>
+    <div class="q" data-type="single" data-answer="C">
+      <div class="q-head"><span class="q-tag single">模块自测</span><span class="q-points">M1 · Q2</span></div>
+      <div class="q-stem">按总体设计主链，疫苗“效力评价”的结果与前面环节的关系是：</div>
+      <div class="q-opts">
+        <label><input type="radio" name="m1q2" value="A"><span>A．评价只是最后贴个标签，与设计无关</span></label>
+        <label><input type="radio" name="m1q2" value="B"><span>B．只评价体液免疫指标就足够</span></label>
+        <label><input type="radio" name="m1q2" value="C"><span>C．评价读数会回头修正选抗原、平台与佐剂，形成迭代</span></label>
+        <label><input type="radio" name="m1q2" value="D"><span>D．效力评价优先于安全性评价</span></label>
+      </div>
+      <div class="q-acts"><button type="button" class="btn primary q-check">提交</button></div>
+      <div class="q-feedback"><div class="vf"></div>
+        <div class="q-explain" style="display:none">选 C。设计是“评价驱动、迭代优化”的循环：中和抗体/CTL 等读数不达标，就要回到 ①②③ 调整；且安全性评价优先于效力，二者都不可少。</div>
+        <div class="q-ref" style="display:none">复习 1.4 五环主链</div>
+      </div>
+    </div>
+    <div style="display:flex;gap:8px;margin-top:6px"><button type="button" class="btn q-check-all">全部交卷</button>
+    <button type="button" class="btn q-redo">重做</button></div>
+  </div>
+</section>
+
+<div class="callout think"><div class="c-t">启发性问题（带着它进入模块二）</div>
+<p>同样是“只拿一个保护性抗原做疫苗”，<b>为什么有的方案免疫效果差强人意，非要把蛋白“搭成颗粒”或“换种递送”才行？</b>——答案与“构象表位”和“免疫系统怎么递呈”有关。下一模块见。</p></div>
+</main>
+
+<div class="wrap" style="display:flex;gap:10px;margin-top:34px"><a class="btn" href="pre.html">← 课前学习</a><a class="btn primary" style="margin-left:auto" href="m2.html">继续：核心知识二 →</a></div>
+<footer class="site-foot"><div class="wrap">
+  <div>
+    <h5>《兽医免疫学》网络课程</h5>
+    <p style="margin:0">章节资源以课堂教学 PPT 为依据重构，服务“课前—课中—课后—评价”一体化学习；每章栏目结构一致，学习内容按章独立设计。</p>
+  </div>
+  <div>
+    <h5>本章页面</h5>
+    <ul><li><a href="index.html">首页</a></li><li><a href="pre.html">课前学习</a></li><li><a href="m1.html">核心知识一</a></li><li><a href="m2.html">核心知识二</a></li><li><a href="m3.html">核心知识三</a></li><li><a href="m4.html">核心知识四</a></li><li><a href="case.html">案例教学</a></li><li><a href="quiz.html">课堂互动 · 在线自测</a></li><li><a href="homework.html">课后作业</a></li><li><a href="eval.html">学习评价</a></li><li><a href="sip.html">课程思政</a></li><li><a href="frontier.html">学科前沿</a></li><li><a href="qrcode.html">扫码学习</a></li></ul>
+  </div>
+  <div>
+    <h5>扫码与反馈</h5>
+    <ul>
+      <li><a href="qrcode.html">📱 扫码进入本章资源</a></li>
+      <li><a href="eval.html#feedback">📋 学习反馈问卷</a></li>
+      <li><a href="../index.html">🏠 课程门户</a></li>
+    </ul>
+  </div>
+</div>
+<div class="copy">© <span id="year">2026</span> 华南农业大学兽医学院 · 课程内容仅供教学使用，前沿信息注明来源，禁止用于商业用途</div></footer>
+<button id="back-top" class="btn primary" style="display:none;position:fixed;right:22px;bottom:22px;z-index:99">↑ 顶部</button>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

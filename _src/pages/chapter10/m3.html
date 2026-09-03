@@ -1,0 +1,188 @@
+<!-- meta: title=第十章 免疫学新型检测方法 · 模块三 可视化快检：胶体金免疫层析试纸条; desc=胶体金与试纸条概念（课件原文）、抗原检测与抗体检测两种原理、T线C线结果判定与常见问题——本章核心模块 -->
+<main class="wrap">
+<section class="page-hero">
+  <p class="kicker">Module 3 · 让敌情“现形”的试纸条</p>
+  <h1>模块三：可视化快检——胶体金免疫层析试纸条</h1>
+  <p class="lead">一张几块钱的试纸条，为什么能在一线战场（猪舍、禽舍、出诊箱）让看不见的病毒“现出原形”？本模块按课件把<b>胶体金试纸条的概念、抗原检测原理、抗体检测原理、结果判定与常见问题</b>讲透——这是本章的“主战役”。</p>
+  <div class="tags"><span class="chip b-k">课件核心</span><span class="chip b-w">原理 + 判读</span><span class="chip b-g">难点突破</span></div>
+</section>
+
+<section class="sec">
+  <h2 class="sec-t"><span class="ico">🎯</span> 学习目标卡</h2>
+  <ul class="goal-box" data-goal="m3">
+    <li>能复述胶体金与胶体金试纸条的定义（课件原文）并画出试纸条的基本结构</li>
+    <li>能按步骤讲清抗原检测试纸条“金标抗体—T 线捕获—C 线质控”的层析逻辑</li>
+    <li>能说明抗体检测试纸条与抗原检测试纸条在设计上的差异</li>
+    <li>能依据 T 线 / C 线正确判读阳性、阴性、无效，并解释质控线存在的意义</li>
+  </ul>
+</section>
+
+<section class="sec" id="concept">
+  <h2 class="sec-t"><span class="ico">📖</span> 3.1 概念：胶体金与胶体金试纸条</h2>
+  <p class="sec-sub">课件原文定义，先记“金”再记“纸条”。</p>
+  <div class="callout key"><div class="c-t">胶体金（Colloidal Gold）</div>
+  <p>由<b>氯金酸在还原剂作用下</b>，聚合成为<b>特定大小的金颗粒</b>，并由于<b>静电作用</b>成为一种稳定的胶体状态，称为胶体金。</p></div>
+  <div class="callout key"><div class="c-t">胶体金试纸条（免疫层析试纸条）</div>
+  <p>以<b>胶体金作为示踪标记物</b>，以<b>硝酸纤维素膜（NC 膜）为载体</b>，利用<b>微孔膜毛细管作用</b>，基于<b>抗原—抗体反应</b>的一种<b>新型免疫标记快检技术</b>。</p></div>
+  <p>两个“直观”：<b>① 金颗粒有颜色</b>——不同粒径的胶体金呈不同程度红色（课件图示），肉眼可直接看到；<b>② 纸会“虹吸”</b>——液体借 NC 膜毛细管作用自行向前流动，无需外加动力和仪器。把这两点结合，就得到“现场可视化”的快检。</p>
+  <div class="fig"><div class="fig-body" style="text-align:center">
+    <svg viewBox="0 0 760 150" width="100%" style="max-width:740px" role="img" aria-label="试纸条基本结构示意">
+      <style>.tlab{font-size:12.5px;fill:#40565b}.tlb{font-size:13.5px;font-weight:700;fill:#0f5f69}</style>
+      <text x="30" y="30" text-anchor="start" class="tlb">试纸条基本结构（侧向层析）</text>
+      <text x="30" y="50" class="tlab">样品从左侧滴加，液体沿 NC 膜向右流动，依次经过：</text>
+      <rect x="30" y="70" width="110" height="46" rx="8" fill="#e8f1ef" stroke="#0f5f69"/>
+      <text x="85" y="96" text-anchor="middle" class="tlb">样品垫</text>
+      <rect x="160" y="70" width="120" height="46" rx="8" fill="#fde9d6" stroke="#b98a2f"/>
+      <text x="220" y="90" text-anchor="middle" class="tlb" style="font-size:12.5px">结合垫（金标抗体 /</text>
+      <text x="220" y="107" text-anchor="middle" class="tlb" style="font-size:12.5px">金标抗原）</text>
+      <rect x="300" y="70" width="250" height="46" rx="8" fill="#f6f2ec" stroke="#8a8f94"/>
+      <text x="425" y="90" text-anchor="middle" class="tlb" style="font-size:12.5px">硝酸纤维素膜（NC 膜）</text>
+      <rect x="425" y="66" width="9" height="54" fill="#c0392b"/>
+      <text x="425" y="60" text-anchor="middle" class="tlab">T 线</text>
+      <rect x="520" y="66" width="9" height="54" fill="#2d7a52"/>
+      <text x="524" y="60" text-anchor="start" class="tlab">C 线</text>
+      <rect x="570" y="70" width="90" height="46" rx="8" fill="#e8f1ef" stroke="#0f5f69"/>
+      <text x="615" y="96" text-anchor="middle" class="tlb" style="font-size:12.5px">吸水垫</text>
+      <text x="30" y="142" class="tlab">T 线 = 检测线（捕获目标物）　C 线 = 质控线（证明纸条工作正常）</text>
+    </svg>
+  </div>
+  <div class="fig-cap"><b>图 3-1</b> 试纸条“一条纸上的层析铁路”：样品垫滴样 → 结合垫释放金标识别元件 → NC 膜上发生特异性结合并被 T 线拦截显色 → 多余金标被 C 线拦截显色 → 吸水垫引流。</div></div>
+</section>
+
+<section class="sec" id="agdet">
+  <h2 class="sec-t"><span class="ico">🦠</span> 3.2 抗原检测原理：让“病毒抗原”现形</h2>
+  <p class="sec-sub">以课件“新冠病毒抗原检测试纸条”为例，逐步拆解（原理同样适用于动物疫病抗原快检）。</p>
+  <h3>第 1 步：制备金标抗体</h3>
+  <p>胶体金颗粒带负电荷，在<b>弱碱环境</b>下，会与蛋白质等<b>正电荷基团</b>形成牢固结合。利用这一作用，让<b>抗体吸附于胶体金颗粒表面</b>，制成<b>金标抗体</b>；同时把特异性抗体以<b>条带状固定在膜上</b>（T 线），并把另一种抗体固定在 C 线位置。</p>
+  <h3>第 2 步：加样，特异性结合 + 侧向流动</h3>
+  <p>滴加待检样品后，<b>结合垫中的金标抗体与样品中的待检抗原结合</b>，形成<b>抗原—金标抗体复合物</b>，并随液体开始侧向流动。以新冠抗原检测为例：样品中若含有<b>新冠病毒 N 蛋白</b>（抗原），会与<b>金标鼠源抗 N 蛋白单克隆抗体（抗体 A）</b>结合。</p>
+  <h3>第 3 步：T 线拦截显色，C 线质控显色</h3>
+  <div class="table-wrap"><table class="tbl">
+    <thead><tr><th style="width:120px">膜上位置</th><th>固定的是什么</th><th>拦截谁 → 结果</th></tr></thead>
+    <tbody>
+      <tr><td><b>检测线 T</b></td><td>抗 N 蛋白<b>多克隆抗体 B</b></td><td>拦截“抗原—金标抗体复合物”→ 复合物聚集显色（阳性信号）</td></tr>
+      <tr><td><b>质控线 C</b></td><td><b>山羊抗鼠特异性 IgG 抗体 C</b>（识别鼠源 IgG）</td><td>拦截未被 T 线拦截的<b>金标鼠源抗体</b>（及部分复合物）→ 聚集显色（纸条有效信号）</td></tr>
+    </tbody>
+  </table></div>
+  <div class="fig"><div class="fig-body" style="text-align:center">
+    <svg viewBox="0 0 760 210" width="100%" style="max-width:740px" role="img" aria-label="抗原检测结果判读示意">
+      <style>.rlab{font-size:13px;font-weight:700}.rsub{font-size:12px;fill:#40565b}</style>
+      <text x="30" y="26" class="rlab">结果怎么“看”：同一张纸条，三种结局</text>
+      <g>
+        <text x="150" y="58" text-anchor="middle" class="rlab">阳性</text>
+        <text x="150" y="76" text-anchor="middle" class="rsub">T、C 均显色</text>
+        <rect x="40" y="96" width="220" height="52" rx="8" fill="#fff" stroke="#8a8f94"/>
+        <rect x="110" y="88" width="9" height="26" fill="#c0392b"/><rect x="205" y="88" width="9" height="26" fill="#2d7a52"/>
+        <text x="150" y="170" text-anchor="middle" class="rsub">检出目标抗原</text>
+      </g>
+      <g>
+        <text x="440" y="58" text-anchor="middle" class="rlab">阴性</text>
+        <text x="440" y="76" text-anchor="middle" class="rsub">仅 C 显色</text>
+        <rect x="330" y="96" width="220" height="52" rx="8" fill="#fff" stroke="#8a8f94"/>
+        <rect x="425" y="88" width="9" height="26" fill="none" stroke="#c0392b" stroke-dasharray="3 3"/>
+        <rect x="520" y="88" width="9" height="26" fill="#2d7a52"/>
+        <text x="440" y="170" text-anchor="middle" class="rsub">未检出目标抗原</text>
+      </g>
+      <g>
+        <text x="730" y="58" text-anchor="middle" class="rlab">无效</text>
+        <text x="730" y="76" text-anchor="middle" class="rsub">C 不显色</text>
+        <rect x="620" y="96" width="220" height="52" rx="8" fill="#fff" stroke="#8a8f94"/>
+        <rect x="690" y="88" width="9" height="26" fill="#c0392b"/>
+        <rect x="785" y="88" width="9" height="26" fill="none" stroke="#2d7a52" stroke-dasharray="3 3"/>
+        <text x="730" y="170" text-anchor="middle" class="rsub">纸条失效，重测</text>
+      </g>
+    </svg>
+  </div>
+  <div class="fig-cap"><b>图 3-2</b> 抗原检测试纸条的三种判读结局（虚线框 = 该线不显色）。C 线恒定显色是“试剂有效”的通行证；C 线不显色一律按无效处理，防止假阴性。</div></div>
+</section>
+
+<section class="sec" id="abdet">
+  <h2 class="sec-t"><span class="ico">💉</span> 3.3 抗体检测原理：让“抗体”现形</h2>
+  <p class="sec-sub">难点突破：测抗体时，角色发生了“大对调”——金标的是抗原，T 线固定的是“抗抗体的抗体”。</p>
+  <div class="callout q"><div class="c-t">先想 10 秒：为什么测抗体不能用“测抗原”那套搭配？</div>
+  <p>测抗原时我们靠“抗病原抗体”去捕获病原；可要测的如果是“动物自己产生的抗体”，就必须先有一个能把它“钓住”的东西——动物抗体的身份特征是它的<b>恒定区（种属特性）</b>，所以要用“<b>抗这种抗体的抗体</b>”（如抗人 IgG）去钓它。</p></div>
+  <div class="table-wrap"><table class="tbl">
+    <thead><tr><th style="width:200px">部件（以新冠 IgG 抗体检测为例，课件）</th><th>是什么 / 干什么</th></tr></thead>
+    <tbody>
+      <tr><td><b>结合垫中的金标物</b></td><td><b>胶体金标记的鼠源重组 N 蛋白（重组抗原）</b>——不是金标抗体，而是“带信号旗的抗原”</td></tr>
+      <tr><td><b>样品中待检物</b></td><td>可能含有<b>抗 N 蛋白的 IgG 抗体</b>（人 / 动物感染或免疫后产生）</td></tr>
+      <tr><td><b>检测线 T</b></td><td>固定<b>抗人 IgG 抗体 B</b>（识别 IgG 恒定区）→ 拦截“样品抗体—金标重组抗原”复合物并显色</td></tr>
+      <tr><td><b>质控线 C</b></td><td>固定<b>抗 N 蛋白抗体 C</b> → 拦截未被结合的游离金标重组抗原并显色</td></tr>
+    </tbody>
+  </table></div>
+  <p><b>逻辑链</b>：样品中的抗 N IgG 先“抓住”金标重组抗原 → 这个复合物流到 T 线，又被固定的<b>抗人 IgG</b> 抓第二下（夹心）→ T 线显色 = 样品里有针对 N 蛋白的 IgG。游离的金标重组抗原则一路流到 C 线，被<b>抗 N 蛋白抗体</b>拦截显色 = 纸条工作正常。</p>
+  <div class="callout key"><div class="c-t">测抗原 vs 测抗体——一张表分清“谁被金标、T 线固定什么”</div>
+  <p style="margin-bottom:.4em"><b>抗原检测试纸条</b>：金标 = 抗病原抗体（金标抗体）；T 线 = 抗病原抗体（第二只“手”）；C 线 = 抗鼠（等种属）IgG 二抗。<br>
+  <b>抗体检测试纸条</b>：金标 = 病原重组抗原；T 线 = 抗动物抗体恒定区的抗体（抗人 IgG / 抗猪 IgG 等）；C 线 = 抗该病原抗原的抗体。</p>
+  <p style="margin:0">共同点：<b>T 线回答“有没有目标物”，C 线回答“纸条有没有坏”</b>。</p></div>
+</section>
+
+<section class="sec" id="judge">
+  <h2 class="sec-t"><span class="ico">✅</span> 3.4 结果判定与常见问题（难点突破）</h2>
+  <p class="sec-sub">课件“结果判定 + 为什么金标抗体能和质控线抗体结合”。</p>
+  <div class="table-wrap"><table class="tbl comp">
+    <thead><tr><th style="width:130px">判读</th><th>T 线（检测线）</th><th>C 线（质控线）</th><th>结论</th></tr></thead>
+    <tbody>
+      <tr><td><b>阳性</b></td><td class="center">显色</td><td class="center">显色</td><td>检出目标物，报告阳性（抗原检测时 T+C 同时显色）</td></tr>
+      <tr><td><b>阴性</b></td><td class="center">不显色</td><td class="center">显色</td><td>未检出目标物，报告阴性（只有质控线显色）</td></tr>
+      <tr><td><b>无效</b></td><td class="center">—</td><td class="center"><b>不显色</b></td><td>纸条失效（无论 T 线是否显色均不采信），需换新条重测</td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout q"><div class="c-t">课件常见问题：为什么金标抗体可以和质控线抗体相互结合？</div>
+  <p>因为质控线固定的“山羊抗鼠 IgG”识别的，是<b>抗体的遗传标志区域（同种异型差异区域）</b>。例如：金标抗体是<b>鼠源 IgG（一抗）</b>，鼠源 IgG 的 <b>CH1–CL 区基本相同</b>；而“山羊抗鼠二抗”是用<b>纯化的小鼠 IgG 免疫山羊</b>获得的血清，因此<b>能识别并结合任何鼠源 IgG</b>——不管它针对的是哪个病毒的哪个表位。</p></div>
+  <div class="duo">
+    <div class="side a"><h4>为什么 C 线“与测什么无关却必须显色”？</h4><ul>
+      <li>金标识别元件（无论是否结合了目标物）都会流经 C 线并被拦截 → 只要有足量金标抗体、层析正常，C 线就应显色</li>
+      <li>C 线不显色 = 金标缺失 / 层析受阻 / 试剂失效 → 结果不可信</li></ul></div>
+    <div class="vs">↔</div>
+    <div class="side b"><h4>这就是“防假阴性”的质控设计</h4><ul>
+      <li>没有 C 线时，若纸条失效，样品阴性会被“照单全收”，造成<b>漏检</b></li>
+      <li>C 线把“纸条自身的失败”与“样品真的阴性”区分开，呼应课件“不能漏检、不能错检”</li></ul></div>
+  </div>
+  <div class="callout think"><div class="c-t">判读小提醒</div>
+  <p>① T 线颜色深浅通常与目标物含量相关，但现场判读以“有 / 无”为准，精确含量请送实验室定量；② 必须在说明书规定时间内判读，放置过久可能产生假阳性线条；③ 阳性样品处理与纸条废弃物处置要遵守<b>生物安全规范</b>（衔接课程思政）。</p></div>
+</section>
+
+<section class="sec">
+  <h2 class="sec-t"><span class="ico">🧠</span> 3.5 小结与自检</h2>
+  <div class="callout key"><div class="c-t">本模块知识地图</div>
+  <p><b>胶体金 / 试纸条概念</b>（金颗粒示踪 + NC 膜毛细管作用）→ <b>抗原检测</b>（金标抗体 → T 线多抗拦截 → C 线二抗拦截）→ <b>抗体检测</b>（金标抗原 → T 线抗抗体拦截）→ <b>判读</b>（T+C 阳性、仅 C 阴性、C 缺失无效）。下一模块把镜头拉远：这样的试纸条是怎么从实验室“研发”出来的？如何评价它准不准？</p></div>
+  <div class="quiz" data-quiz-score="m3q">
+    <div class="q" data-type="single" data-answer="C">
+      <div class="q-head"><span class="q-tag single">模块自测</span><span class="q-points">M3 · Q1</span></div>
+      <div class="q-stem">在抗体检测试纸条中，结合垫里的胶体金标记物是：</div>
+      <div class="q-opts">
+        <label><input type="radio" name="m3q1" value="A"><span>A．针对病原抗原的单克隆抗体</span></label>
+        <label><input type="radio" name="m3q1" value="B"><span>B．山羊抗鼠 IgG 抗体</span></label>
+        <label><input type="radio" name="m3q1" value="C"><span>C．病原重组抗原（如重组 N 蛋白）</span></label>
+        <label><input type="radio" name="m3q1" value="D"><span>D．待检动物的血清抗体</span></label>
+      </div>
+      <div class="q-acts"><button type="button" class="btn primary q-check">提交</button></div>
+      <div class="q-feedback"><div class="vf"></div>
+        <div class="q-explain" style="display:none">选 C。测抗体时金标的是<b>重组抗原</b>——样品抗体先抓住金标抗原，复合物再到 T 线被“抗抗体”拦截显色。这与抗原检测（金标抗体）正好相反。</div>
+        <div class="q-ref" style="display:none">复习 3.3 抗体检测原理</div>
+      </div>
+    </div>
+    <div class="q" data-type="single" data-answer="D">
+      <div class="q-head"><span class="q-tag single">模块自测</span><span class="q-points">M3 · Q2</span></div>
+      <div class="q-stem">某试纸条检测结果显示：T 线显色、C 线不显色。正确的处理是：</div>
+      <div class="q-opts">
+        <label><input type="radio" name="m3q2" value="A"><span>A．判为强阳性，T 线都显色了</span></label>
+        <label><input type="radio" name="m3q2" value="B"><span>B．判为阴性，因为只有一条线</span></label>
+        <label><input type="radio" name="m3q2" value="C"><span>C．判为弱阳性，结合临床再定</span></label>
+        <label><input type="radio" name="m3q2" value="D"><span>D．判为无效，C 线不显色说明纸条失效，重新检测</span></label>
+      </div>
+      <div class="q-acts"><button type="button" class="btn primary q-check">提交</button></div>
+      <div class="q-feedback"><div class="vf"></div>
+        <div class="q-explain" style="display:none">选 D。C 线是质控线，不显色即纸条无效，T 线颜色不足为凭——这是防止把“试剂失效”误读为阳性或阴性。</div>
+        <div class="q-ref" style="display:none">复习 3.4 结果判定</div>
+      </div>
+    </div>
+    <div style="display:flex;gap:8px;margin-top:6px"><button type="button" class="btn q-check-all">全部交卷</button>
+    <button type="button" class="btn q-redo">重做</button></div>
+  </div>
+</section>
+
+<div class="callout think"><div class="c-t">启发性问题（带着它进入模块四）</div>
+<p>如果我要给“母乳里的 PEDV 抗体”开发一张试纸条——抗原从哪来？标记用胶体金够不够灵敏？怎么证明它测得准？——模块四带你走进“试剂盒研发”的现场。</p></div>
+</main>
