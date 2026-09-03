@@ -1,0 +1,183 @@
+<!-- meta: title=模块二 · 表位与抗原特异性; desc=抗原决定簇、线性表位与构象表位、T细胞与B细胞识别差异、交叉反应——本章核心与教学比赛亮点所在 -->
+<main class="wrap">
+<section class="page-hero">
+  <p class="kicker">Module 2 · 核心机制</p>
+  <h1>模块二：表位与抗原特异性</h1>
+  <p class="lead">为什么疫苗“专病专防”？为什么同一个病原能让机体产生“认得出但不一样”的多种抗体？答案都在这里——抗原的<b>“分子指纹”：表位（抗原决定簇）</b>。这是本章的教学难点，也是最值得你在比赛/面试中讲清楚的一页。</p>
+  <div class="tags"><span class="chip b-k">本章重点</span><span class="chip b-w">本章难点</span><span class="chip b-v">含可视化</span></div>
+</section>
+
+<section class="sec">
+  <h2 class="sec-t"><span class="ico">🎯</span> 学习目标卡</h2>
+  <ul class="goal-box" data-goal="m2">
+    <li>能说出表位的定义及其化学本质（氨基酸/多糖/核苷酸残基数范围）</li>
+    <li>能用图解释线性表位与构象表位的本质区别，并预测“变性处理”后的影响</li>
+    <li>能解释为什么 T 细胞受体只认“加工后的线性表位”，而 B 细胞可直接识别构象表位</li>
+    <li>能用“一个抗原多种表位”解释多克隆抗体与交叉反应现象</li>
+  </ul>
+</section>
+
+<section class="sec">
+  <h2 class="sec-t"><span class="ico">📖</span> 2.1 表位：特异性的结构基础</h2>
+  <div class="callout key"><div class="c-t">表位（Epitope / 抗原决定簇 Antigenic Determinant）</div>
+  <p>抗原分子中<b>决定抗原特异性</b>的<b>特殊化学基团</b>，是决定抗原特异性的结构基础。一般由 <b>5–17 个氨基酸残基</b>、<b>5–7 个多糖</b>或<b>核苷酸残基</b>组成（课件）。</p></div>
+  <p>三个关键推论（请边读边在抗原分子上想象“靶点”）：</p>
+  <ul>
+    <li>一个抗原分子往往含有<b>多种、多个</b>表位 → 免疫后产生的抗体是“针对多个表位”的<b>多克隆抗体</b>；</li>
+    <li>表位决定了抗体/效应细胞“认”哪个部位 → 特异性；</li>
+    <li>表位是<b>反应原性</b>的结构落点：上一模块的“小分子半抗原”，本质上≈单个表位大小的分子。</li>
+  </ul>
+  <div class="callout think"><div class="c-t">把两个模块接起来</div>
+  <p>免疫原性（能不能激发）的分子基础=整体分子+载体+递呈；反应原性（认不认得）的分子基础=<b>表位</b>。一个分子可以有强免疫原性但让人“只认其中一小块”——特异性由此而来。</p></div>
+</section>
+
+<section class="sec">
+  <h2 class="sec-t"><span class="ico">🖼️</span> 2.2 两类表位：线性 vs 构象（可视化）</h2>
+  <div class="fig"><div class="fig-body" style="text-align:center">
+    <svg viewBox="0 0 760 300" width="100%" style="max-width:740px" role="img" aria-label="线性表位与构象表位示意">
+      <style>.sl{font-size:13px;fill:#40565b}.sb{font-size:14px;font-weight:700}</style>
+      <!-- 线性表位 -->
+      <rect x="20" y="18" width="350" height="130" rx="12" fill="#f2f7f6" stroke="#c3d6d3"/>
+      <text x="40" y="44" class="sb" fill="#0f5f69">线性表位（Linear Epitope）</text>
+      <polyline points="50,96 110,96 150,96 200,96 250,96 300,96 340,96" fill="none" stroke="#0a3d44" stroke-width="6" stroke-linecap="round"/>
+      <!-- 线性表位片段涂色 E1 -->
+      <line x1="150" y1="96" x2="200" y2="96" stroke="#b98a2f" stroke-width="10" stroke-linecap="round"/>
+      <text x="175" y="124" text-anchor="middle" class="sl" fill="#8a6515">氨基酸连续排列（E1）</text>
+      <text x="195" y="66" class="sl">…序列上的连续片段…</text>
+      <text x="30" y="138" class="sl" style="font-size:11.5px">变性(加热/化学)后表位仍保留</text>
+      <!-- 构象表位 -->
+      <rect x="390" y="18" width="350" height="130" rx="12" fill="#f0eef8" stroke="#c9c3e6"/>
+      <text x="410" y="44" class="sb" fill="#4f4a8a">构象表位（Conformational Epitope）</text>
+      <path d="M 420 150 C 445 60, 480 60, 505 120 C 525 170, 560 90, 590 130 C 615 165, 650 95, 700 135" fill="none" stroke="#0a3d44" stroke-width="6" stroke-linecap="round"/>
+      <circle cx="500" cy="112" r="11" fill="#b98a2f"/>
+      <circle cx="600" cy="125" r="11" fill="#b98a2f"/>
+      <path d="M 500 123 L 600 136" stroke="#9d3a2e" stroke-width="3" stroke-dasharray="4 3"/>
+      <text x="545" y="86" text-anchor="middle" class="sl" fill="#8a6515">序列上相距很远、空间上靠近</text>
+      <text x="545" y="104" text-anchor="middle" class="sl" fill="#8a6515">的两个片段共同构成（E2）</text>
+      <text x="400" y="140" class="sl" style="font-size:11.5px">变性折叠破坏后表位丢失</text>
+    </svg>
+  </div>
+  <div class="fig-cap"><b>图 2-1</b> 线性表位（E1）是肽链上连续排列的短肽；构象表位（E2）由空间折叠后靠拢的氨基酸共同形成。<b>关键区分实验</b>：把蛋白变性（破坏空间构象）——线性表位仍能被识别，构象表位则丢失。</div></div>
+
+  <div class="table-wrap"><table class="tbl comp">
+    <thead><tr><th style="width:130px">比较项</th><th>线性表位</th><th>构象表位</th></tr></thead>
+    <tbody>
+      <tr><td>空间结构</td><td>氨基酸在肽链上<b>连续</b>排列</td><td>氨基酸序列<b>不连续</b>，靠空间折叠聚拢</td></tr>
+      <tr><td>是否依赖构象</td><td>否（变性后仍可识别）</td><td>是（变性/去折叠后丢失）</td></tr>
+      <tr><td>常见识别者</td><td>T 细胞（加工后）；也可被 B 细胞识别</td><td>主要被 B 细胞（BCR/抗体）识别</td></tr>
+      <tr><td>对疫苗设计的意义</td><td>重组短肽/线性肽疫苗</td><td><b>需保持天然折叠</b>——VLP、天然蛋白更优</td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout q"><div class="c-t">启发式提问（课堂可用）</div>
+  <p>把某种病毒灭活（甲醛/加热处理）做成疫苗时，<b>最担心丢失的是哪类表位</b>？这对“灭活工艺不能过度”有何提示？——参考：构象表位。过度灭活破坏表面蛋白折叠 → 中和抗体关键表位丢失 → 疫苗效力下降。这也是“抗原质量决定疫苗质量”的又一体现。</p></div>
+</section>
+
+<section class="sec" id="break">
+  <h2 class="sec-t"><span class="ico">🧠</span> 2.3 难点突破：为什么 TCR 只认线性表位，而 BCR 能直接认构象表位？</h2>
+  <div class="grid grid-2">
+    <div class="card"><h3>T 细胞（TCR 识别）</h3>
+      <ul style="font-size:14.5px">
+        <li>TCR 只能识别<b>线性表位</b>；</li>
+        <li>抗原必须先经 APC 摄取、<b>降解加工</b>成短肽，与 <b>MHC 分子</b>结合后“呈递”到细胞表面；</li>
+        <li>TCR 识别的是“MHC + 肽”复合物 → 天然构象蛋白 T 细胞“看不见”；</li>
+        <li>意义：T 细胞负责核查<b>内部加工后的情报</b>（如病毒感染的细胞）。</li>
+      </ul>
+    </div>
+    <div class="card"><h3>B 细胞（BCR 识别）</h3>
+      <ul style="font-size:14.5px">
+        <li>BCR（膜型抗体）可<b>直接识别</b>天然蛋白表面的<b>构象表位</b>与<b>线性表位</b>；</li>
+        <li>不需要 APC 预加工——看见“原样敌军”即结合；</li>
+        <li>分泌型抗体识别的主要是表面构象表位（尤其是病毒中和表位）；</li>
+        <li>意义：B 细胞负责拦截<b>细胞外的敌军本体</b>。</li>
+      </ul>
+    </div>
+  </div>
+  <div class="fig"><div class="fig-body" style="text-align:center">
+    <svg viewBox="0 0 760 230" width="100%" style="max-width:740px" role="img" aria-label="T与B细胞识别差异示意">
+      <style>.sl2{font-size:13px;fill:#40565b}.sb2{font-size:14px;font-weight:700}</style>
+      <!-- B 细胞直接识别 -->
+      <rect x="20" y="16" width="350" height="196" rx="12" fill="#e9f4ee" stroke="#bcdcc8"/>
+      <text x="40" y="44" class="sb2" fill="#2d7a52">B 细胞：直接识别天然抗原</text>
+      <path d="M 90 150 C 110 90, 150 90, 170 150" fill="none" stroke="#0a3d44" stroke-width="5"/>
+      <circle cx="130" cy="112" r="10" fill="#b98a2f"/>
+      <path d="M 130 102 C 150 70, 210 66, 240 86" fill="none" stroke="#2d7a52" stroke-width="3"/>
+      <circle cx="205" cy="80" r="7" fill="#2d7a52"/>
+      <text x="205" y="70" text-anchor="middle" class="sl2">BCR</text>
+      <text x="130" y="186" text-anchor="middle" class="sl2">完整蛋白 → 直接“看见”表面构象表位</text>
+      <!-- T 细胞：加工 -->
+      <rect x="390" y="16" width="350" height="196" rx="12" fill="#f0eef8" stroke="#c9c3e6"/>
+      <text x="410" y="44" class="sb2" fill="#4f4a8a">T 细胞：只认“加工后的线性肽”</text>
+      <!-- APC -->
+      <rect x="420" y="70" width="120" height="70" rx="10" fill="#fdf6e6" stroke="#b98a2f"/>
+      <text x="480" y="100" text-anchor="middle" class="sl2">APC</text>
+      <text x="480" y="120" text-anchor="middle" class="sl2" style="font-size:11.5px">降解 → 装载 MHC</text>
+      <rect x="570" y="60" width="16" height="16" fill="#b98a2f"/>
+      <rect x="574" y="76" width="70" height="9" rx="4" fill="#4f4a8a"/>
+      <rect x="570" y="86" width="16" height="16" fill="#4f4a8a"/>
+      <path d="M 545 110 C 600 150, 620 160, 660 150" fill="none" stroke="#0a3d44" stroke-width="3" stroke-dasharray="5 4"/>
+      <circle cx="680" cy="146" r="10" fill="#2d7a52"/><text x="680" y="126" text-anchor="middle" class="sl2">TCR</text>
+      <text x="565" y="196" text-anchor="middle" class="sl2" style="font-size:12.5px">肽段(线性)+MHC 复合物 才能被 TCR 识别</text>
+    </svg>
+  </div>
+  <div class="fig-cap"><b>图 2-2</b> 识别分工：BCR 直接结合天然蛋白表面（构象表位为主）；TCR 识别经 APC 加工、由 MHC 分子展示的线性肽段。这条“分工”将贯穿第二~八章的细胞免疫与体液免疫内容。</div></div>
+  <div class="callout q"><div class="c-t">口头推理题（检验是否真懂）</div>
+  <p>某病毒疫苗用“完整灭活病毒”制成（保留天然构象）；另一款是“线性短肽疫苗”。<b>哪一款更可能诱导针对病毒表面的中和抗体？为什么？哪一款更容易诱导 T 细胞应答？</b><br>
+  <details class="acc" style="margin-top:8px"><summary>参考思路（先自己推理再看）</summary><div class="acc-b"><p style="font-size:14.5px">完整灭活病毒保留了表面构象表位 → 更能诱导 B 细胞产生抗“构象表位”的中和抗体；线性短肽疫苗以线性表位为主，免疫后肽段可被加工递呈 → 更偏向诱导 T 细胞应答。两类疫苗各有侧重，这也是选择疫苗形式时要权衡的抗原学逻辑。</p></div></details></p></div>
+</section>
+
+<section class="sec">
+  <h2 class="sec-t"><span class="ico">🧬</span> 2.4 一个抗原，多种表位：多克隆抗体与交叉反应</h2>
+  <div class="flow">
+    <div class="f-step hl"><i class="f-i">现象①</i><b>多克隆抗体</b><span>一个抗原多个表位 → 免疫血清是“混编部队”</span></div>
+    <div class="f-arr">→</div>
+    <div class="f-step"><i class="f-i">现象②</i><b>交叉反应</b><span>不同抗原含相同/相似表位（异嗜性抗原）→ 一抗认两“敌”</span></div>
+    <div class="f-arr">→</div>
+    <div class="f-step"><i class="f-i">应用</i><b>单抗与血清学</b><span>单抗=针对单一表位（第十章）；交叉反应可用于病原亲缘分析</span></div>
+  </div>
+  <div class="callout key"><div class="c-t">交叉反应小结</div>
+  <p>交叉反应的本质：抗体/效应细胞“认的是表位而不是整个病原”。例如不同血清型病原之间存在共同抗原成分时，血清学检测会出现交叉——这对诊断试剂的“特异性”设计既是干扰、也是可被利用的工具（如用共同抗原做属水平筛查）。</p></div>
+</section>
+
+<section class="sec">
+  <h2 class="sec-t"><span class="ico">🧠</span> 2.5 小结与自检</h2>
+  <div class="callout key"><div class="c-t">本模块知识地图</div>
+  <p><b>表位</b>（决定特异性的化学基团）→ <b>线性 vs 构象</b>（变性区分实验）→ <b>T 认线性（加工+MHC）、B 认构象（直接）</b> → <b>多种表位</b> → 多克隆抗体 / 交叉反应。请回答主线问题：<b>疫苗为何专病专防？</b>——因为特异性写在表位里，不同病原的表位不同。</p></div>
+  <div class="quiz" data-quiz-score="m2q">
+    <div class="q" data-type="single" data-answer="B">
+      <div class="q-head"><span class="q-tag single">模块自测</span><span class="q-points">M2 · Q1</span></div>
+      <div class="q-stem">某蛋白经强变性处理后，某抗体不再能识别它；但另一抗体仍能识别。最可能的原因是：</div>
+      <div class="q-opts">
+        <label><input type="radio" name="m2q1" value="A"><span>A．该蛋白已完全降解为氨基酸</span></label>
+        <label><input type="radio" name="m2q1" value="B"><span>B．前一种抗体针对构象表位，后一种针对线性表位</span></label>
+        <label><input type="radio" name="m2q1" value="C"><span>C．两个抗体都不是特异性抗体</span></label>
+        <label><input type="radio" name="m2q1" value="D"><span>D．变性使所有表位都消失了</span></label>
+      </div>
+      <div class="q-acts"><button type="button" class="btn primary q-check">提交</button></div>
+      <div class="q-feedback"><div class="vf"></div>
+        <div class="q-explain" style="display:none">选 B。变性破坏空间构象：构象表位丢失（抗体不再识别），线性表位仍保留（另一抗体仍识别）——这就是区分两类表位的经典实验逻辑。</div>
+        <div class="q-ref" style="display:none">复习 2.2 对比表</div>
+      </div>
+    </div>
+    <div class="q" data-type="single" data-answer="C">
+      <div class="q-head"><span class="q-tag single">模块自测</span><span class="q-points">M2 · Q2</span></div>
+      <div class="q-stem">下列关于 T 细胞识别的说法正确的是：</div>
+      <div class="q-opts">
+        <label><input type="radio" name="m2q2" value="A"><span>A．TCR 可直接识别天然蛋白的构象表位</span></label>
+        <label><input type="radio" name="m2q2" value="B"><span>B．TCR 识别完整的细菌菌体</span></label>
+        <label><input type="radio" name="m2q2" value="C"><span>C．抗原需经 APC 加工成线性肽并与 MHC 结合后才能被 TCR 识别</span></label>
+        <label><input type="radio" name="m2q2" value="D"><span>D．T 细胞和 B 细胞的识别方式完全相同</span></label>
+      </div>
+      <div class="q-acts"><button type="button" class="btn primary q-check">提交</button></div>
+      <div class="q-feedback"><div class="vf"></div>
+        <div class="q-explain" style="display:none">选 C。TCR 只识别“MHC+线性肽”复合物，抗原必须经降解加工。B 细胞（BCR）才能直接识别天然构象表位。两者分工不同（图 2-2）。</div>
+        <div class="q-ref" style="display:none">复习 2.3 难点突破</div>
+      </div>
+    </div>
+    <div style="display:flex;gap:8px;margin-top:6px"><button type="button" class="btn q-check-all">全部交卷</button>
+    <button type="button" class="btn q-redo">重做</button></div>
+  </div>
+</section>
+
+<div class="callout think"><div class="c-t">启发性问题（进入模块三）</div>
+<p>知道了“表位是分子指纹”，现在请看兽医学里的真身：细菌的菌毛、荚膜、鞭毛，病毒的衣壳与囊膜糖蛋白——它们分别相当于敌军的“什么特征”？下一模块带你认识这些<b>兽医学重要抗原</b>。</p></div>
+</main>

@@ -1,0 +1,152 @@
+{
+  "chapters": [
+    {
+      "key": "chapter01",
+      "no": "第一章",
+      "title": "抗原",
+      "en": "Antigen",
+      "subtitle": "免疫应答的“启动开关”",
+      "metaphor": "敌方武装力量 · 疫苗的核心有效成分",
+      "status": "live"
+    },
+    {
+      "key": "chapter04",
+      "no": "第四章",
+      "title": "抗体生物学功能",
+      "en": "Antibody",
+      "subtitle": "精准制导导弹",
+      "metaphor": "",
+      "status": "upcoming"
+    },
+    {
+      "key": "chapter05",
+      "no": "第五章",
+      "title": "细胞因子",
+      "en": "Cytokine",
+      "subtitle": "战斗信号",
+      "metaphor": "",
+      "status": "upcoming"
+    },
+    {
+      "key": "chapter08",
+      "no": "第八章",
+      "title": "体液免疫应答效应",
+      "en": "Humoral Immunity",
+      "subtitle": "特种作战部队的战果清算",
+      "metaphor": "",
+      "status": "upcoming"
+    },
+    {
+      "key": "chapter09",
+      "no": "第九章",
+      "title": "Ⅰ型超敏反应",
+      "en": "Type Ⅰ Hypersensitivity",
+      "subtitle": "友军误击与过度火力",
+      "metaphor": "",
+      "status": "upcoming"
+    },
+    {
+      "key": "chapter10",
+      "no": "第十章",
+      "title": "免疫学新型检测方法",
+      "en": "Immunoassays",
+      "subtitle": "战场敌情侦察与情报分析",
+      "metaphor": "",
+      "status": "upcoming"
+    },
+    {
+      "key": "chapter11",
+      "no": "第十一章",
+      "title": "免疫预防",
+      "en": "Immunoprophylaxis",
+      "subtitle": "新兵军事演习与战前推演",
+      "metaphor": "",
+      "status": "upcoming"
+    },
+    {
+      "key": "chapter12",
+      "no": "第十二章",
+      "title": "新型疫苗与设计",
+      "en": "Next-gen Vaccines",
+      "subtitle": "面向未来的“武器系统”",
+      "metaphor": "",
+      "status": "upcoming"
+    }
+  ],
+  "ch1pages": [
+    {
+      "file": "index.html",
+      "short": "章节首页",
+      "nav": "首页"
+    },
+    {
+      "file": "pre.html",
+      "short": "课前学习",
+      "nav": "课前学习"
+    },
+    {
+      "file": "m1.html",
+      "short": "模块一 · 抗原的概念与特性",
+      "nav": "M1 概念与特性"
+    },
+    {
+      "file": "m2.html",
+      "short": "模块二 · 表位与抗原特异性",
+      "nav": "M2 表位与特异性"
+    },
+    {
+      "file": "m3.html",
+      "short": "模块三 · 兽医学重要抗原：微生物抗原",
+      "nav": "M3 微生物抗原"
+    },
+    {
+      "file": "m4.html",
+      "short": "模块四 · 兽医学重要抗原：毒素与基因工程抗原",
+      "nav": "M4 毒素·工程抗原"
+    },
+    {
+      "file": "case.html",
+      "short": "案例工坊",
+      "nav": "案例工坊"
+    },
+    {
+      "file": "quiz.html",
+      "short": "在线自测",
+      "nav": "在线自测"
+    },
+    {
+      "file": "homework.html",
+      "short": "课后作业",
+      "nav": "课后作业"
+    },
+    {
+      "file": "eval.html",
+      "short": "学习评价",
+      "nav": "学习评价"
+    },
+    {
+      "file": "frontier.html",
+      "short": "课程思政与学科前沿",
+      "nav": "思政·前沿"
+    },
+    {
+      "file": "teacher.html",
+      "short": "教师文档 · 20分钟比赛设计",
+      "nav": "教师文档"
+    },
+    {
+      "file": "script.html",
+      "short": "20分钟逐字讲课稿",
+      "nav": "逐字稿"
+    },
+    {
+      "file": "qrcode.html",
+      "short": "扫码学习",
+      "nav": "扫码学习"
+    }
+  ],
+  "deploy": {
+    "portal": "",
+    "ch1": ""
+  }
+}
