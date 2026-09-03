@@ -40,7 +40,7 @@ DEPLOY = {k: v for k, v in (cfg.get("deploy") or {}).items() if v}
 def apply_deploy(text):
     """把片段中的 @@CH1_URL@@ / @@PORTAL_URL@@ 替换为已配置的公网地址（未配置则给出提示文案）"""
     placeholders = {
-        "@@CH1_URL@@": ("chapter01", "本章公网地址"),
+        "@@CH1_URL@@": ("ch1", "本章公网地址"),
         "@@PORTAL_URL@@": ("portal", "课程门户公网地址"),
     }
     for tok, (key, label) in placeholders.items():
