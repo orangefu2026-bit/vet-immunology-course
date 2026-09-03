@@ -1,49 +1,54 @@
-# 《兽医免疫学》网络课程 · 教学比赛资源站
+# 《兽医免疫学》网络课程
 
-面向高校青年教师教学竞赛（青教赛）的章节化网络教学资源。第一章《抗原》为**样板章**，整站结构、视觉、互动与评价体系即“统一标准”，后续章节按同一模板扩展。
+以教学课件为内容依据、面向**学生在线学习**的章节化网络教学资源。第一章《抗原》为样板章——整站结构、视觉、互动与评价体系即“统一标准”，后续章节按同一模板扩展。每章一个**独立二维码**，扫码直达本章页面。
 
-## 目录结构
+> 网络教学站点只提供学生栏目；教师备赛材料（20 分钟教学设计、逐字讲课稿、板书、评分映射、自评）为**线下本地文件**，存放于仓库外的 `00_教师比赛材料/`，不随 GitHub Pages 发布、不进学生可见导航。
 
-```
-vet-immuno-course/
-├── index.html                # 课程门户（章节目录/学习闭环说明）
-├── chapter01/                # 第一章 抗原（每章一个独立目录 + 独立二维码）
-│   ├── index.html            # 章节首页（目标/重难点/路径/进度）
-│   ├── pre.html              # 课前学习（任务/启发问题/旧知回顾/前测）
-│   ├── m1..m4.html           # 知识模块（概念与特性 / 表位与特异性 / 微生物抗原 / 毒素与基因工程抗原）
-│   ├── case.html             # 案例工坊（狂犬病 / 类毒素·血清疗法 / PEDV·TGEV VLP）
-│   ├── quiz.html             # 在线自测（14 题即时反馈）
-│   ├── homework.html         # 课后分层作业（基础/提升/拓展）
-│   ├── eval.html             # 学习评价（百分制构成 + 量表 + 反馈）
-│   ├── frontier.html         # 课程思政（4 点）与学科前沿（4 项，均注来源）
-│   ├── teacher.html          # 教师文档：20 分钟教学设计 + 板书 + 评分映射 + 评委自评
-│   ├── script.html           # 20 分钟逐字讲课稿
-│   └── qrcode.html           # 扫码学习页（二维码 + 备用地址）
-├── assets/css/style.css      # 统一视觉系统
-├── assets/js/main.js         # 交互引擎（测验/进度/打卡/表单，无外部依赖）
-└── assets/qr/                # 各章二维码 PNG（高清，部署后生成）
-```
+## 章内页面（网络教学 · 每章 13 页）
+
+| 栏目 | 文件 | 说明 |
+|---|---|---|
+| 首页 | `chapter01/index.html` | 学习目标 / 重难点 / 学习路径与进度 / 学习任务清单 |
+| 课前学习 | `chapter01/pre.html` | 学习任务 · 启发问题 · 旧知回顾 · 前测（即时反馈） |
+| 核心知识 | `chapter01/m1.html` … `m4.html` | 模块化知识 + 图示化 + 启发性问题 + 模块自测 |
+| 案例教学 | `chapter01/case.html` | 狂犬病处置 / 破伤风类毒素 / PEDV·TGEV VLP 疫苗 |
+| 课堂互动 | `chapter01/quiz.html` | 课堂互动 · 在线自测（单选/多选/判断/情境，即时反馈） |
+| 课后作业 | `chapter01/homework.html` | 基础 / 提升 / 拓展分层作业 |
+| 学习评价 | `chapter01/eval.html` | 百分制构成 · 能力画像 · 自评量表 · 反馈问卷 |
+| 课程思政 | `chapter01/sip.html` | 4 个融入点（专业知识→切入点→活动→价值引领） |
+| 学科前沿 | `chapter01/frontier.html` | 4 项前沿（mRNA/AlphaFold/VLP/ASF，注明来源） |
+| 扫码学习 | `chapter01/qrcode.html` | 本章二维码 + 备用网址 + 二维码规划表 |
+
+共享资源：`assets/css/style.css`（视觉系统）、`assets/js/main.js`（测验/进度/打卡引擎，无外部依赖）、`assets/qr/`（各章二维码 PNG）。
 
 ## 构建方式（改动后必读）
 
-成品页面由 `_src/` 源生成（共享导航/页脚/上一页下一页由模板统一维护）：
-
 ```bash
-python _src/build.py          # 重新生成全部页面到仓库根
+python _src/build.py          # 站点根（仓库根）下执行，重新生成全部页面
 ```
 
 - 改共享壳：`_src/templates/ch_shell.html`、`portal_shell.html`
 - 改页面正文：`_src/pages/chapter01/*.html`（首行 `<!-- meta: title=…; desc=… -->` 生效）
-- 增/删页面、改导航顺序：编辑 `_src/config.json` 的 `ch1pages`
-- 部署地址：写入 `_src/config.json` 的 `deploy.ch1 / deploy.portal` 后重建，`qrcode.html` 自动显示真实备用地址
+- 增删页面、改导航顺序：编辑 `_src/config.json` 的 `ch1pages`
+- 部署地址：`_src/config.json` 的 `deploy.ch1 / deploy.portal`（build 时注入 qrcode 页备用网址）
+- 生成目录只增不删：**从 config 移除页面后请手动删除旧的生成文件**（如 `rm chapter01/teacher.html`）
 
 ## 新增章节（第 2 章起按此复制）
 
-1. `_src/config.json`：把该章从 `"status": "upcoming"` 改为 `"live"`；
-2. 复制 `_src/pages/chapter01/` 为 `chapterXX/`，逐页替换内容（视觉与结构不变）；
-3. 将本章课件放在 `_src/` 同级原始目录，用 `python _work/extract_ch1.py` 的思路提取文本 → 按蓝本模式重构（模块/案例/题库/作业/评价/思政/前沿各自独立设计）；
-4. `python _src/build.py` 重建；门户首页自动生成新章卡片；
-5. 部署后写入该章公网 URL → 生成独立二维码 → 放入 `assets/qr/chapterXX-qr.png` → 更新该章 `qrcode.html`。
+1. `_src/config.json`：把该章 `"status": "upcoming"` 改为 `"live"`（门户自动出卡片）；
+2. 复制 `_src/pages/chapter01/` 为 `chapterXX/`，逐页替换内容（栏目与视觉不变，知识点/案例/思政/前沿按新章独立设计）；
+3. `python _src/build.py` 重建 → 本地验证 → 推送；
+4. 部署后写入该章公网 URL → 生成独立二维码（`python _work/gen_qr.py <URL> assets/qr/chapterXX-qr.png`，自动解码自检）→ 同步更新该章 `qrcode.html`。
+
+## 教师比赛材料（不进网络站点）
+
+用以下命令把已生成的教师文档导出为本地单文件（内联样式、可离线打开与打印、链接指向线上资源）：
+
+```bash
+python _work/export_teacher.py     # 输出到仓库外 00_教师比赛材料/
+```
+
+输出：`第一章_抗原_20分钟教学设计与板书.html`、`第一章_抗原_20分钟逐字讲课稿.html`。
 
 ## 内容纪律
 
@@ -51,10 +56,6 @@ python _src/build.py          # 重新生成全部页面到仓库根
 - 扩充内容（前沿/案例/思政）均注明来源，禁止虚构文献、病例与数据；
 - 若课件与其他资料冲突，先标注冲突、交由任课教师确认，不自行猜测。
 
-## 部署与二维码（交付要求）
+## 部署与二维码
 
-网站为纯静态、无构建依赖、无外部 CDN/字体请求，可直接托管于 GitHub Pages / 任意静态主机。
-
-二维码 = 真实公网 URL 编码的标准 QR Code（≥1000×1000 PNG），禁止 localhost/本机路径。
-流程：**部署 → 取得 https 公网 URL → 生成 QR → 扫码解码验证 → 交付**。
-各章二维码互不相同、各自直达本章页面。
+网站为纯静态、无构建依赖、无外部 CDN/字体请求，托管于 GitHub Pages（当前：公开仓库，main 分支根目录）。二维码 = 真实公网 URL 编码的标准 QR（≥1000×1000 PNG、留白充足），禁止 localhost / 本机路径；各章二维码互不相同、各自直达本章页面。

@@ -76,7 +76,7 @@
   "ch1pages": [
     {
       "file": "index.html",
-      "short": "章节首页",
+      "short": "首页",
       "nav": "首页"
     },
     {
@@ -86,33 +86,33 @@
     },
     {
       "file": "m1.html",
-      "short": "模块一 · 抗原的概念与特性",
+      "short": "核心知识一 · 抗原的概念与特性",
       "nav": "M1 概念与特性"
     },
     {
       "file": "m2.html",
-      "short": "模块二 · 表位与抗原特异性",
+      "short": "核心知识二 · 表位与抗原特异性",
       "nav": "M2 表位与特异性"
     },
     {
       "file": "m3.html",
-      "short": "模块三 · 兽医学重要抗原：微生物抗原",
+      "short": "核心知识三 · 微生物抗原",
       "nav": "M3 微生物抗原"
     },
     {
       "file": "m4.html",
-      "short": "模块四 · 兽医学重要抗原：毒素与基因工程抗原",
+      "short": "核心知识四 · 毒素与基因工程抗原",
       "nav": "M4 毒素·工程抗原"
     },
     {
       "file": "case.html",
-      "short": "案例工坊",
-      "nav": "案例工坊"
+      "short": "案例教学",
+      "nav": "案例教学"
     },
     {
       "file": "quiz.html",
-      "short": "在线自测",
-      "nav": "在线自测"
+      "short": "课堂互动 · 在线自测",
+      "nav": "课堂互动"
     },
     {
       "file": "homework.html",
@@ -125,19 +125,14 @@
       "nav": "学习评价"
     },
     {
+      "file": "sip.html",
+      "short": "课程思政",
+      "nav": "课程思政"
+    },
+    {
       "file": "frontier.html",
-      "short": "课程思政与学科前沿",
-      "nav": "思政·前沿"
-    },
-    {
-      "file": "teacher.html",
-      "short": "教师文档 · 20分钟比赛设计",
-      "nav": "教师文档"
-    },
-    {
-      "file": "script.html",
-      "short": "20分钟逐字讲课稿",
-      "nav": "逐字稿"
+      "short": "学科前沿",
+      "nav": "学科前沿"
     },
     {
       "file": "qrcode.html",
